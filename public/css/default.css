@@ -1,0 +1,18 @@
+body {
+	font-size:12px;
+	color: #000;
+	font-family:arial, tahoma, goergia, helvetica,Verdana, Geneva, sans-serif;
+	text-align:left;
+}
+#wrapper{
+	width:1000px;
+	margin: 0px auto;
+}
+#header{
+	width:1000px;
+	background:#ccc;
+}
+#footer{
+	width:1000px;
+	background:#777;
+}
