@@ -11,10 +11,13 @@ class User extends Controller {
     }
 
     function select() {
-        $data = $this->model->get_all();
+        $where = [
+            'id '      => 66,
+            'username' => 'nhiht',
+        ];
+        $data = $this->model->user();
         echo "<pre>";
         var_dump($data);
-        exit();
     }
 
     function add() {

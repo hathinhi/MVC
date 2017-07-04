@@ -1,8 +1,23 @@
 <?php
 
 class  User_Model extends Model {
+    protected $_table = 'users';
+
     function __construct() {
         parent::__construct();
+    }
+
+    public function user() {
+        $where = array(
+            'username' => 'nhiht',
+            'age'      => '14',
+        );
+        $this->db->select();
+        $this->db->from('users');
+
+        $this->db->join('classes', 'users.id=classes.user_id');
+        $this->db->join('cities', 'users.id=cities.user_id');
+        return $this->db->query();
     }
 
     public function user_list() {
