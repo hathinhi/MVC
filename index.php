@@ -9,6 +9,7 @@ require("libs/Hash.php");
 require("libs/Form.php");
 require("config/database.php");
 require("config/paths.php");
+require("util/Auth.php");
 $bootstrap = new Bootstrap();
 
 ?>

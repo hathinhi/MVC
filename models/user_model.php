@@ -7,26 +7,14 @@ class  User_Model extends Model {
         parent::__construct();
     }
 
-    public function user() {
-        $where = array(
-            'username' => 'nhiht',
-            'age'      => '14',
-        );
+    public function listUser() {
         $this->db->select();
         $this->db->from('users');
-
-        $this->db->join('classes', 'users.id=classes.user_id');
-        $this->db->join('cities', 'users.id=cities.user_id');
+        $this->db->where_not('id', '70', '<');
+//        $this->db->where_not('username', 'nhiht');
         return $this->db->query();
     }
 
-    public function user_list() {
-        $th = $this->db->prepare("SELECT * FROM `users`");
-        $th->execute();
-        $data = $th->fetchAll();
-        return $data;
-
-    }
 
     function get_all() {
         $data = $this->db->get_all('users', 2);
@@ -45,11 +33,11 @@ class  User_Model extends Model {
         ));
     }
 
-    public function editUser($id) {
-        $sth = $this->db->prepare('SELECT * FROM users WHERE id = :id');
-        $sth->execute(array(':id' => $id));
-        return $sth->fetch();
-    }
+//    public function editUser($id) {
+//        $sth = $this->db->prepare('SELECT * FROM users WHERE id = :id');
+//        $sth->execute(array(':id' => $id));
+//        return $sth->fetch();
+//    }
 
     function editSave($data) {
         $data_update = array(

@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" type="text/css" href="<?php echo URL ?>public/css/default.css">
     <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.js"></script>
-    <title>VMC</title>
+    <title><?=(isset($this->title)) ? $this->title : 'MVC'; ?></title>
     <?php
     if (isset($this->js)) {
         foreach ($this->js as $js) {

@@ -3,32 +3,26 @@
 class Home extends Controller {
     public function __construct() {
         parent::__construct();
-        session::init();
-        $logged = Session::get('logIn');
-        if ($logged == FALSE) {
-            Session::destroy();
-            header('Location:login');
-            exit();
-        }
+        $this->view->title = 'Home';
+        Auth::handleLogin();
         $this->view->js = array('home/js/default.js');
     }
 
     function index() {
+        $this->view->render('header');
         $this->view->render("home/index");
+        $this->view->render('footer');
     }
 
-    function xhrInsert()
-    {
+    function xhrInsert() {
         $this->model->xhrInsert();
     }
 
-    function xhrGetListings()
-    {
+    function xhrGetListings() {
         $this->model->xhrGetListings();
     }
 
-    function xhrDeleteListing()
-    {
+    function xhrDeleteListing() {
         $this->model->xhrDeleteListing();
     }
 }

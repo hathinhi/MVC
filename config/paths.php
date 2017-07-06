@@ -1,2 +1,3 @@
 <?php
-define('URL','http://localhost/demomvc/');
+define('URL','http://localhost/MVC/');
+define('LIBS', 'libs/');

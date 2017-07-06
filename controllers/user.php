@@ -3,6 +3,7 @@
 class User extends Controller {
     public function __construct() {
         parent::__construct();
+        Auth::handleLogin();
     }
 
     function index() {
@@ -11,11 +12,7 @@ class User extends Controller {
     }
 
     function select() {
-        $where = [
-            'id '      => 66,
-            'username' => 'nhiht',
-        ];
-        $data = $this->model->user();
+        $data = $this->model->listUser();
         echo "<pre>";
         var_dump($data);
     }
