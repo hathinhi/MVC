@@ -10,8 +10,10 @@ class  User_Model extends Model {
     public function listUser() {
         $this->db->select();
         $this->db->from('users');
-        $this->db->where_not('id', '70', '<');
-//        $this->db->where_not('username', 'nhiht');
+//        $this->db->where('id', '70', '<');
+//        $this->db->where_or('age', '15', '>');
+        $this->db->where_not('username', 'nhiht');
+
         return $this->db->query();
     }
 

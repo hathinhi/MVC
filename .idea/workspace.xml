@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="080bd9d2-5262-411d-8ded-8a701d730574" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/util/Auth.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.php" afterPath="$PROJECT_DIR$/config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/paths.php" afterPath="$PROJECT_DIR$/config/paths.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/help.php" afterPath="$PROJECT_DIR$/controllers/help.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/home.php" afterPath="$PROJECT_DIR$/controllers/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/index.php" afterPath="$PROJECT_DIR$/controllers/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/user.php" afterPath="$PROJECT_DIR$/controllers/user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/Bootstrap.php" afterPath="$PROJECT_DIR$/libs/Bootstrap.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/Database.php" afterPath="$PROJECT_DIR$/libs/Database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/Form/Val.php" afterPath="$PROJECT_DIR$/libs/Form/Val.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/Model.php" afterPath="$PROJECT_DIR$/libs/Model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/View.php" afterPath="$PROJECT_DIR$/libs/View.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/user_model.php" afterPath="$PROJECT_DIR$/models/user_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/header.php" afterPath="$PROJECT_DIR$/views/header.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,7 +31,7 @@
       <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="324">
               <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
@@ -55,10 +41,10 @@
       <file leaf-file-name="user_model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/user_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+            <state relative-caret-position="234">
+              <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
               <folding>
-                <marker date="1499364145866" expanded="true" signature="862:896" ph="SELECT * FRO... users" />
+                <marker date="1499402704714" expanded="true" signature="908:942" ph="SELECT * FRO... users" />
               </folding>
             </state>
           </provider>
@@ -67,33 +53,60 @@
       <file leaf-file-name="Database.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/libs/Database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="151" column="40" lean-forward="false" selection-start-line="151" selection-start-column="40" selection-end-line="151" selection-end-column="40" />
+            <state relative-caret-position="396">
+              <caret line="78" column="21" lean-forward="true" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
               <folding>
+                <element signature="n#__construct#0;n#Database#0;n#!!top" expanded="false" />
                 <element signature="n#select#0;n#Database#0;n#!!top" expanded="false" />
                 <element signature="n#from#0;n#Database#0;n#!!top" expanded="false" />
                 <element signature="n#where#0;n#Database#0;n#!!top" expanded="false" />
                 <element signature="n#where_or#0;n#Database#0;n#!!top" expanded="false" />
-                <element signature="n#where_xor#0;n#Database#0;n#!!top" expanded="false" />
+                <element signature="n#where_not#0;n#Database#0;n#!!top" expanded="false" />
                 <element signature="n#limit#0;n#Database#0;n#!!top" expanded="false" />
                 <element signature="n#order_by#0;n#Database#0;n#!!top" expanded="false" />
                 <element signature="n#group_by#0;n#Database#0;n#!!top" expanded="false" />
                 <element signature="n#join#0;n#Database#0;n#!!top" expanded="false" />
-                <element signature="e#2340#2424#0#PHP" expanded="false" />
-                <element signature="e#2433#2516#0#PHP" expanded="false" />
-                <element signature="e#2551#2826#0#PHP" expanded="false" />
-                <element signature="e#2631#2816#0#PHP" expanded="false" />
-                <element signature="e#2934#3297#0#PHP" expanded="false" />
-                <element signature="e#3337#3660#0#PHP" expanded="false" />
-                <element signature="e#3692#3774#0#PHP" expanded="false" />
-                <marker date="1499364162359" expanded="true" signature="5497:5619" ph="SELECT ${$se... ${$table}" />
-                <marker date="1499364162359" expanded="true" signature="7130:7152" ph="SELECT * FRO... ${$table}" />
-                <marker date="1499364162359" expanded="true" signature="7207:7235" ph="SELECT * FRO... ${$table}" />
-                <marker date="1499364162359" expanded="true" signature="7426:7470" ph="SELECT * FRO... ${$table}" />
-                <marker date="1499364162359" expanded="true" signature="7631:7650" ph="SELECT * FRO... users" />
-                <marker date="1499364162359" expanded="true" signature="7931:7986" ph="INSERT INTO ${$table}... " />
-                <marker date="1499364162359" expanded="true" signature="8412:8450" ph="UPDATE ${$ta... " />
-                <marker date="1499364162359" expanded="true" signature="8679:8717" ph="DELETE FROM " />
+                <element signature="n#get_all#0;n#Database#0;n#!!top" expanded="false" />
+                <element signature="e#2964#3144#0#PHP" expanded="false" />
+                <element signature="e#3056#3144#0#PHP" expanded="false" />
+                <element signature="n#insert#0;n#Database#0;n#!!top" expanded="false" />
+                <element signature="e#3495#3586#0#PHP" expanded="false" />
+                <element signature="n#update#0;n#Database#0;n#!!top" expanded="false" />
+                <element signature="e#3732#3824#0#PHP" expanded="false" />
+                <element signature="e#3965#4056#0#PHP" expanded="false" />
+                <element signature="n#delete#0;n#Database#0;n#!!top" expanded="false" />
+                <element signature="e#4234#4317#0#PHP" expanded="false" />
+                <element signature="n#bindValue#0;n#Database#0;n#!!top" expanded="false" />
+                <element signature="e#4377#4689#0#PHP" expanded="false" />
+                <element signature="e#4423#4678#0#PHP" expanded="false" />
+                <element signature="e#4575#4678#0#PHP" expanded="false" />
+                <element signature="e#4701#4767#0#PHP" expanded="false" />
+                <element signature="e#5177#5247#0#PHP" expanded="false" />
+                <element signature="n#setOrderBy#0;n#Database#0;n#!!top" expanded="false" />
+                <element signature="e#5332#5695#0#PHP" expanded="false" />
+                <element signature="e#5370#5581#0#PHP" expanded="false" />
+                <element signature="e#5737#5807#0#PHP" expanded="false" />
+                <element signature="n#setGroupBy#0;n#Database#0;n#!!top" expanded="false" />
+                <element signature="e#5892#6215#0#PHP" expanded="false" />
+                <element signature="e#5930#6088#0#PHP" expanded="false" />
+                <element signature="e#6257#6379#0#PHP" expanded="false" />
+                <element signature="e#7096#7128#0#PHP" expanded="false" />
+                <element signature="e#7331#7508#0#PHP" expanded="false" />
+                <element signature="e#7627#7659#0#PHP" expanded="false" />
+                <element signature="n#stringWhereOr#0;n#Database#0;n#!!top" expanded="false" />
+                <element signature="e#7810#8111#0#PHP" expanded="false" />
+                <element signature="e#7852#8046#0#PHP" expanded="false" />
+                <element signature="e#8176#8208#0#PHP" expanded="false" />
+                <element signature="n#stringWhereNot#0;n#Database#0;n#!!top" expanded="false" />
+                <element signature="e#8364#8695#0#PHP" expanded="false" />
+                <element signature="e#8407#8612#0#PHP" expanded="false" />
+                <element signature="e#8762#8800#0#PHP" expanded="false" />
+                <marker date="1499404721433" expanded="true" signature="2596:2699" ph="SELECT ${$se... ${$table}" />
+                <marker date="1499404721433" expanded="false" signature="3020:3042" ph="SELECT * FRO... ${$table}" />
+                <marker date="1499404721433" expanded="false" signature="3097:3125" ph="SELECT * FRO... ${$table}" />
+                <marker date="1499404721433" expanded="false" signature="3427:3482" ph="INSERT INTO ${$table}... " />
+                <marker date="1499404721433" expanded="false" signature="3908:3946" ph="UPDATE ${$ta... " />
+                <marker date="1499404721433" expanded="false" signature="4175:4213" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -177,6 +190,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -326,7 +340,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -770,12 +783,13 @@
       <workItem from="1499220331884" duration="10068000" />
       <workItem from="1499236912887" duration="10841000" />
       <workItem from="1499309170941" duration="17466000" />
-      <workItem from="1499353614971" duration="1518000" />
+      <workItem from="1499353614971" duration="2280000" />
+      <workItem from="1499394165925" duration="10833000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68126000" />
+    <option name="totallyTimeSpent" value="79721000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -801,10 +815,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32507738" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.027863776" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27094755" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20516837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -865,7 +879,7 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="12" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -884,10 +898,88 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/user_model.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <folding>
+            <marker date="1499402704714" expanded="true" signature="908:942" ph="SELECT * FRO... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/Database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1278">
+          <caret line="88" column="30" lean-forward="true" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
+          <folding>
+            <element signature="n#__construct#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="n#select#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="n#from#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="n#where#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="n#where_or#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="n#where_not#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="n#limit#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="n#order_by#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="n#group_by#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="n#join#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="n#get_all#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#2964#3144#0#PHP" expanded="false" />
+            <element signature="e#3056#3144#0#PHP" expanded="false" />
+            <element signature="n#insert#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#3495#3586#0#PHP" expanded="false" />
+            <element signature="n#update#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#3732#3824#0#PHP" expanded="false" />
+            <element signature="e#3965#4056#0#PHP" expanded="false" />
+            <element signature="n#delete#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#4234#4317#0#PHP" expanded="false" />
+            <element signature="n#bindValue#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#4377#4689#0#PHP" expanded="false" />
+            <element signature="e#4423#4678#0#PHP" expanded="false" />
+            <element signature="e#4575#4678#0#PHP" expanded="false" />
+            <element signature="e#4701#4767#0#PHP" expanded="false" />
+            <element signature="e#5177#5247#0#PHP" expanded="false" />
+            <element signature="n#setOrderBy#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#5332#5695#0#PHP" expanded="false" />
+            <element signature="e#5370#5581#0#PHP" expanded="false" />
+            <element signature="e#5737#5807#0#PHP" expanded="false" />
+            <element signature="n#setGroupBy#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#5892#6215#0#PHP" expanded="false" />
+            <element signature="e#5930#6088#0#PHP" expanded="false" />
+            <element signature="e#6257#6379#0#PHP" expanded="false" />
+            <element signature="e#7096#7128#0#PHP" expanded="false" />
+            <element signature="e#7331#7508#0#PHP" expanded="false" />
+            <element signature="e#7627#7659#0#PHP" expanded="false" />
+            <element signature="n#stringWhereOr#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#7810#8111#0#PHP" expanded="false" />
+            <element signature="e#7852#8046#0#PHP" expanded="false" />
+            <element signature="e#8176#8208#0#PHP" expanded="false" />
+            <element signature="n#stringWhereNot#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#8364#8695#0#PHP" expanded="false" />
+            <element signature="e#8407#8612#0#PHP" expanded="false" />
+            <element signature="e#8762#8800#0#PHP" expanded="false" />
+            <marker date="1499404721433" expanded="true" signature="2596:2699" ph="SELECT ${$se... ${$table}" />
+            <marker date="1499404721433" expanded="false" signature="3020:3042" ph="SELECT * FRO... ${$table}" />
+            <marker date="1499404721433" expanded="false" signature="3097:3125" ph="SELECT * FRO... ${$table}" />
+            <marker date="1499404721433" expanded="false" signature="3427:3482" ph="INSERT INTO ${$table}... " />
+            <marker date="1499404721433" expanded="false" signature="3908:3946" ph="UPDATE ${$ta... " />
+            <marker date="1499404721433" expanded="false" signature="4175:4213" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user_model.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
           <folding>
-            <marker date="1499364145866" expanded="true" signature="862:896" ph="SELECT * FRO... users" />
+            <marker date="1499402704714" expanded="true" signature="908:942" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -897,30 +989,57 @@
         <state relative-caret-position="1692">
           <caret line="154" column="20" lean-forward="false" selection-start-line="154" selection-start-column="17" selection-end-line="154" selection-end-column="20" />
           <folding>
+            <element signature="n#__construct#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#select#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#from#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#where#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#where_or#0;n#Database#0;n#!!top" expanded="false" />
-            <element signature="n#where_xor#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="n#where_not#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#limit#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#order_by#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#group_by#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#join#0;n#Database#0;n#!!top" expanded="false" />
-            <element signature="e#2340#2424#0#PHP" expanded="false" />
-            <element signature="e#2433#2516#0#PHP" expanded="false" />
-            <element signature="e#2551#2826#0#PHP" expanded="false" />
-            <element signature="e#2631#2816#0#PHP" expanded="false" />
-            <element signature="e#2934#3297#0#PHP" expanded="false" />
-            <element signature="e#3337#3660#0#PHP" expanded="false" />
-            <element signature="e#3692#3774#0#PHP" expanded="false" />
-            <marker date="1499364162359" expanded="true" signature="5497:5619" ph="SELECT ${$se... ${$table}" />
-            <marker date="1499364162359" expanded="true" signature="7130:7152" ph="SELECT * FRO... ${$table}" />
-            <marker date="1499364162359" expanded="true" signature="7207:7235" ph="SELECT * FRO... ${$table}" />
-            <marker date="1499364162359" expanded="true" signature="7426:7470" ph="SELECT * FRO... ${$table}" />
-            <marker date="1499364162359" expanded="true" signature="7631:7650" ph="SELECT * FRO... users" />
-            <marker date="1499364162359" expanded="true" signature="7931:7986" ph="INSERT INTO ${$table}... " />
-            <marker date="1499364162359" expanded="true" signature="8412:8450" ph="UPDATE ${$ta... " />
-            <marker date="1499364162359" expanded="true" signature="8679:8717" ph="DELETE FROM " />
+            <element signature="n#get_all#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#2964#3144#0#PHP" expanded="false" />
+            <element signature="e#3056#3144#0#PHP" expanded="false" />
+            <element signature="n#insert#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#3495#3586#0#PHP" expanded="false" />
+            <element signature="n#update#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#3732#3824#0#PHP" expanded="false" />
+            <element signature="e#3965#4056#0#PHP" expanded="false" />
+            <element signature="n#delete#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#4234#4317#0#PHP" expanded="false" />
+            <element signature="n#bindValue#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#4377#4689#0#PHP" expanded="false" />
+            <element signature="e#4423#4678#0#PHP" expanded="false" />
+            <element signature="e#4575#4678#0#PHP" expanded="false" />
+            <element signature="e#4701#4767#0#PHP" expanded="false" />
+            <element signature="e#5177#5247#0#PHP" expanded="false" />
+            <element signature="n#setOrderBy#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#5332#5695#0#PHP" expanded="false" />
+            <element signature="e#5370#5581#0#PHP" expanded="false" />
+            <element signature="e#5737#5807#0#PHP" expanded="false" />
+            <element signature="n#setGroupBy#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#5892#6215#0#PHP" expanded="false" />
+            <element signature="e#5930#6088#0#PHP" expanded="false" />
+            <element signature="e#6257#6379#0#PHP" expanded="false" />
+            <element signature="e#7096#7128#0#PHP" expanded="false" />
+            <element signature="e#7331#7508#0#PHP" expanded="false" />
+            <element signature="e#7627#7659#0#PHP" expanded="false" />
+            <element signature="n#stringWhereOr#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#7810#8111#0#PHP" expanded="false" />
+            <element signature="e#7852#8046#0#PHP" expanded="false" />
+            <element signature="e#8176#8208#0#PHP" expanded="false" />
+            <element signature="n#stringWhereNot#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#8364#8695#0#PHP" expanded="false" />
+            <element signature="e#8407#8612#0#PHP" expanded="false" />
+            <element signature="e#8762#8800#0#PHP" expanded="false" />
+            <marker date="1499404721433" expanded="true" signature="2596:2699" ph="SELECT ${$se... ${$table}" />
+            <marker date="1499404721433" expanded="false" signature="3020:3042" ph="SELECT * FRO... ${$table}" />
+            <marker date="1499404721433" expanded="false" signature="3097:3125" ph="SELECT * FRO... ${$table}" />
+            <marker date="1499404721433" expanded="false" signature="3427:3482" ph="INSERT INTO ${$table}... " />
+            <marker date="1499404721433" expanded="false" signature="3908:3946" ph="UPDATE ${$ta... " />
+            <marker date="1499404721433" expanded="false" signature="4175:4213" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -930,7 +1049,7 @@
         <state relative-caret-position="252">
           <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
           <folding>
-            <marker date="1499364145866" expanded="true" signature="862:896" ph="SELECT * FRO... users" />
+            <marker date="1499402704714" expanded="true" signature="908:942" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -948,30 +1067,57 @@
         <state relative-caret-position="1764">
           <caret line="98" column="0" lean-forward="true" selection-start-line="89" selection-start-column="10" selection-end-line="98" selection-end-column="0" />
           <folding>
+            <element signature="n#__construct#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#select#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#from#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#where#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#where_or#0;n#Database#0;n#!!top" expanded="false" />
-            <element signature="n#where_xor#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="n#where_not#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#limit#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#order_by#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#group_by#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#join#0;n#Database#0;n#!!top" expanded="false" />
-            <element signature="e#2340#2424#0#PHP" expanded="false" />
-            <element signature="e#2433#2516#0#PHP" expanded="false" />
-            <element signature="e#2551#2826#0#PHP" expanded="false" />
-            <element signature="e#2631#2816#0#PHP" expanded="false" />
-            <element signature="e#2934#3297#0#PHP" expanded="false" />
-            <element signature="e#3337#3660#0#PHP" expanded="false" />
-            <element signature="e#3692#3774#0#PHP" expanded="false" />
-            <marker date="1499364162359" expanded="true" signature="5497:5619" ph="SELECT ${$se... ${$table}" />
-            <marker date="1499364162359" expanded="true" signature="7130:7152" ph="SELECT * FRO... ${$table}" />
-            <marker date="1499364162359" expanded="true" signature="7207:7235" ph="SELECT * FRO... ${$table}" />
-            <marker date="1499364162359" expanded="true" signature="7426:7470" ph="SELECT * FRO... ${$table}" />
-            <marker date="1499364162359" expanded="true" signature="7631:7650" ph="SELECT * FRO... users" />
-            <marker date="1499364162359" expanded="true" signature="7931:7986" ph="INSERT INTO ${$table}... " />
-            <marker date="1499364162359" expanded="true" signature="8412:8450" ph="UPDATE ${$ta... " />
-            <marker date="1499364162359" expanded="true" signature="8679:8717" ph="DELETE FROM " />
+            <element signature="n#get_all#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#2964#3144#0#PHP" expanded="false" />
+            <element signature="e#3056#3144#0#PHP" expanded="false" />
+            <element signature="n#insert#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#3495#3586#0#PHP" expanded="false" />
+            <element signature="n#update#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#3732#3824#0#PHP" expanded="false" />
+            <element signature="e#3965#4056#0#PHP" expanded="false" />
+            <element signature="n#delete#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#4234#4317#0#PHP" expanded="false" />
+            <element signature="n#bindValue#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#4377#4689#0#PHP" expanded="false" />
+            <element signature="e#4423#4678#0#PHP" expanded="false" />
+            <element signature="e#4575#4678#0#PHP" expanded="false" />
+            <element signature="e#4701#4767#0#PHP" expanded="false" />
+            <element signature="e#5177#5247#0#PHP" expanded="false" />
+            <element signature="n#setOrderBy#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#5332#5695#0#PHP" expanded="false" />
+            <element signature="e#5370#5581#0#PHP" expanded="false" />
+            <element signature="e#5737#5807#0#PHP" expanded="false" />
+            <element signature="n#setGroupBy#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#5892#6215#0#PHP" expanded="false" />
+            <element signature="e#5930#6088#0#PHP" expanded="false" />
+            <element signature="e#6257#6379#0#PHP" expanded="false" />
+            <element signature="e#7096#7128#0#PHP" expanded="false" />
+            <element signature="e#7331#7508#0#PHP" expanded="false" />
+            <element signature="e#7627#7659#0#PHP" expanded="false" />
+            <element signature="n#stringWhereOr#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#7810#8111#0#PHP" expanded="false" />
+            <element signature="e#7852#8046#0#PHP" expanded="false" />
+            <element signature="e#8176#8208#0#PHP" expanded="false" />
+            <element signature="n#stringWhereNot#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#8364#8695#0#PHP" expanded="false" />
+            <element signature="e#8407#8612#0#PHP" expanded="false" />
+            <element signature="e#8762#8800#0#PHP" expanded="false" />
+            <marker date="1499404721433" expanded="true" signature="2596:2699" ph="SELECT ${$se... ${$table}" />
+            <marker date="1499404721433" expanded="false" signature="3020:3042" ph="SELECT * FRO... ${$table}" />
+            <marker date="1499404721433" expanded="false" signature="3097:3125" ph="SELECT * FRO... ${$table}" />
+            <marker date="1499404721433" expanded="false" signature="3427:3482" ph="INSERT INTO ${$table}... " />
+            <marker date="1499404721433" expanded="false" signature="3908:3946" ph="UPDATE ${$ta... " />
+            <marker date="1499404721433" expanded="false" signature="4175:4213" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -981,7 +1127,7 @@
         <state relative-caret-position="216">
           <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
           <folding>
-            <marker date="1499364145866" expanded="true" signature="862:896" ph="SELECT * FRO... users" />
+            <marker date="1499402704714" expanded="true" signature="908:942" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -999,30 +1145,57 @@
         <state relative-caret-position="1440">
           <caret line="80" column="17" lean-forward="false" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
           <folding>
+            <element signature="n#__construct#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#select#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#from#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#where#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#where_or#0;n#Database#0;n#!!top" expanded="false" />
-            <element signature="n#where_xor#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="n#where_not#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#limit#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#order_by#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#group_by#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#join#0;n#Database#0;n#!!top" expanded="false" />
-            <element signature="e#2340#2424#0#PHP" expanded="false" />
-            <element signature="e#2433#2516#0#PHP" expanded="false" />
-            <element signature="e#2551#2826#0#PHP" expanded="false" />
-            <element signature="e#2631#2816#0#PHP" expanded="false" />
-            <element signature="e#2934#3297#0#PHP" expanded="false" />
-            <element signature="e#3337#3660#0#PHP" expanded="false" />
-            <element signature="e#3692#3774#0#PHP" expanded="false" />
-            <marker date="1499364162359" expanded="true" signature="5497:5619" ph="SELECT ${$se... ${$table}" />
-            <marker date="1499364162359" expanded="true" signature="7130:7152" ph="SELECT * FRO... ${$table}" />
-            <marker date="1499364162359" expanded="true" signature="7207:7235" ph="SELECT * FRO... ${$table}" />
-            <marker date="1499364162359" expanded="true" signature="7426:7470" ph="SELECT * FRO... ${$table}" />
-            <marker date="1499364162359" expanded="true" signature="7631:7650" ph="SELECT * FRO... users" />
-            <marker date="1499364162359" expanded="true" signature="7931:7986" ph="INSERT INTO ${$table}... " />
-            <marker date="1499364162359" expanded="true" signature="8412:8450" ph="UPDATE ${$ta... " />
-            <marker date="1499364162359" expanded="true" signature="8679:8717" ph="DELETE FROM " />
+            <element signature="n#get_all#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#2964#3144#0#PHP" expanded="false" />
+            <element signature="e#3056#3144#0#PHP" expanded="false" />
+            <element signature="n#insert#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#3495#3586#0#PHP" expanded="false" />
+            <element signature="n#update#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#3732#3824#0#PHP" expanded="false" />
+            <element signature="e#3965#4056#0#PHP" expanded="false" />
+            <element signature="n#delete#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#4234#4317#0#PHP" expanded="false" />
+            <element signature="n#bindValue#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#4377#4689#0#PHP" expanded="false" />
+            <element signature="e#4423#4678#0#PHP" expanded="false" />
+            <element signature="e#4575#4678#0#PHP" expanded="false" />
+            <element signature="e#4701#4767#0#PHP" expanded="false" />
+            <element signature="e#5177#5247#0#PHP" expanded="false" />
+            <element signature="n#setOrderBy#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#5332#5695#0#PHP" expanded="false" />
+            <element signature="e#5370#5581#0#PHP" expanded="false" />
+            <element signature="e#5737#5807#0#PHP" expanded="false" />
+            <element signature="n#setGroupBy#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#5892#6215#0#PHP" expanded="false" />
+            <element signature="e#5930#6088#0#PHP" expanded="false" />
+            <element signature="e#6257#6379#0#PHP" expanded="false" />
+            <element signature="e#7096#7128#0#PHP" expanded="false" />
+            <element signature="e#7331#7508#0#PHP" expanded="false" />
+            <element signature="e#7627#7659#0#PHP" expanded="false" />
+            <element signature="n#stringWhereOr#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#7810#8111#0#PHP" expanded="false" />
+            <element signature="e#7852#8046#0#PHP" expanded="false" />
+            <element signature="e#8176#8208#0#PHP" expanded="false" />
+            <element signature="n#stringWhereNot#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#8364#8695#0#PHP" expanded="false" />
+            <element signature="e#8407#8612#0#PHP" expanded="false" />
+            <element signature="e#8762#8800#0#PHP" expanded="false" />
+            <marker date="1499404721433" expanded="true" signature="2596:2699" ph="SELECT ${$se... ${$table}" />
+            <marker date="1499404721433" expanded="false" signature="3020:3042" ph="SELECT * FRO... ${$table}" />
+            <marker date="1499404721433" expanded="false" signature="3097:3125" ph="SELECT * FRO... ${$table}" />
+            <marker date="1499404721433" expanded="false" signature="3427:3482" ph="INSERT INTO ${$table}... " />
+            <marker date="1499404721433" expanded="false" signature="3908:3946" ph="UPDATE ${$ta... " />
+            <marker date="1499404721433" expanded="false" signature="4175:4213" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -1079,7 +1252,7 @@
         <state relative-caret-position="320">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <marker date="1499364145866" expanded="true" signature="862:896" ph="SELECT * FRO... users" />
+            <marker date="1499402704714" expanded="true" signature="908:942" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -1089,30 +1262,57 @@
         <state relative-caret-position="1300">
           <caret line="65" column="13" lean-forward="true" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
           <folding>
+            <element signature="n#__construct#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#select#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#from#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#where#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#where_or#0;n#Database#0;n#!!top" expanded="false" />
-            <element signature="n#where_xor#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="n#where_not#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#limit#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#order_by#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#group_by#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#join#0;n#Database#0;n#!!top" expanded="false" />
-            <element signature="e#2340#2424#0#PHP" expanded="false" />
-            <element signature="e#2433#2516#0#PHP" expanded="false" />
-            <element signature="e#2551#2826#0#PHP" expanded="false" />
-            <element signature="e#2631#2816#0#PHP" expanded="false" />
-            <element signature="e#2934#3297#0#PHP" expanded="false" />
-            <element signature="e#3337#3660#0#PHP" expanded="false" />
-            <element signature="e#3692#3774#0#PHP" expanded="false" />
-            <marker date="1499364162359" expanded="true" signature="5497:5619" ph="SELECT ${$se... ${$table}" />
-            <marker date="1499364162359" expanded="true" signature="7130:7152" ph="SELECT * FRO... ${$table}" />
-            <marker date="1499364162359" expanded="true" signature="7207:7235" ph="SELECT * FRO... ${$table}" />
-            <marker date="1499364162359" expanded="true" signature="7426:7470" ph="SELECT * FRO... ${$table}" />
-            <marker date="1499364162359" expanded="true" signature="7631:7650" ph="SELECT * FRO... users" />
-            <marker date="1499364162359" expanded="true" signature="7931:7986" ph="INSERT INTO ${$table}... " />
-            <marker date="1499364162359" expanded="true" signature="8412:8450" ph="UPDATE ${$ta... " />
-            <marker date="1499364162359" expanded="true" signature="8679:8717" ph="DELETE FROM " />
+            <element signature="n#get_all#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#2964#3144#0#PHP" expanded="false" />
+            <element signature="e#3056#3144#0#PHP" expanded="false" />
+            <element signature="n#insert#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#3495#3586#0#PHP" expanded="false" />
+            <element signature="n#update#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#3732#3824#0#PHP" expanded="false" />
+            <element signature="e#3965#4056#0#PHP" expanded="false" />
+            <element signature="n#delete#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#4234#4317#0#PHP" expanded="false" />
+            <element signature="n#bindValue#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#4377#4689#0#PHP" expanded="false" />
+            <element signature="e#4423#4678#0#PHP" expanded="false" />
+            <element signature="e#4575#4678#0#PHP" expanded="false" />
+            <element signature="e#4701#4767#0#PHP" expanded="false" />
+            <element signature="e#5177#5247#0#PHP" expanded="false" />
+            <element signature="n#setOrderBy#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#5332#5695#0#PHP" expanded="false" />
+            <element signature="e#5370#5581#0#PHP" expanded="false" />
+            <element signature="e#5737#5807#0#PHP" expanded="false" />
+            <element signature="n#setGroupBy#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#5892#6215#0#PHP" expanded="false" />
+            <element signature="e#5930#6088#0#PHP" expanded="false" />
+            <element signature="e#6257#6379#0#PHP" expanded="false" />
+            <element signature="e#7096#7128#0#PHP" expanded="false" />
+            <element signature="e#7331#7508#0#PHP" expanded="false" />
+            <element signature="e#7627#7659#0#PHP" expanded="false" />
+            <element signature="n#stringWhereOr#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#7810#8111#0#PHP" expanded="false" />
+            <element signature="e#7852#8046#0#PHP" expanded="false" />
+            <element signature="e#8176#8208#0#PHP" expanded="false" />
+            <element signature="n#stringWhereNot#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#8364#8695#0#PHP" expanded="false" />
+            <element signature="e#8407#8612#0#PHP" expanded="false" />
+            <element signature="e#8762#8800#0#PHP" expanded="false" />
+            <marker date="1499404721433" expanded="true" signature="2596:2699" ph="SELECT ${$se... ${$table}" />
+            <marker date="1499404721433" expanded="false" signature="3020:3042" ph="SELECT * FRO... ${$table}" />
+            <marker date="1499404721433" expanded="false" signature="3097:3125" ph="SELECT * FRO... ${$table}" />
+            <marker date="1499404721433" expanded="false" signature="3427:3482" ph="INSERT INTO ${$table}... " />
+            <marker date="1499404721433" expanded="false" signature="3908:3946" ph="UPDATE ${$ta... " />
+            <marker date="1499404721433" expanded="false" signature="4175:4213" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -1121,6 +1321,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1149,6 +1350,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1319,7 +1521,7 @@
     <entry file="file://$PROJECT_DIR$/controllers/demo.php" />
     <entry file="file://$PROJECT_DIR$/controllers/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="324">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
@@ -1327,43 +1529,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/user_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        <state relative-caret-position="234">
+          <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
           <folding>
-            <marker date="1499364145866" expanded="true" signature="862:896" ph="SELECT * FRO... users" />
+            <marker date="1499402704714" expanded="true" signature="908:942" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/Database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="151" column="40" lean-forward="false" selection-start-line="151" selection-start-column="40" selection-end-line="151" selection-end-column="40" />
+        <state relative-caret-position="396">
+          <caret line="78" column="21" lean-forward="true" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
           <folding>
+            <element signature="n#__construct#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#select#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#from#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#where#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#where_or#0;n#Database#0;n#!!top" expanded="false" />
-            <element signature="n#where_xor#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="n#where_not#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#limit#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#order_by#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#group_by#0;n#Database#0;n#!!top" expanded="false" />
             <element signature="n#join#0;n#Database#0;n#!!top" expanded="false" />
-            <element signature="e#2340#2424#0#PHP" expanded="false" />
-            <element signature="e#2433#2516#0#PHP" expanded="false" />
-            <element signature="e#2551#2826#0#PHP" expanded="false" />
-            <element signature="e#2631#2816#0#PHP" expanded="false" />
-            <element signature="e#2934#3297#0#PHP" expanded="false" />
-            <element signature="e#3337#3660#0#PHP" expanded="false" />
-            <element signature="e#3692#3774#0#PHP" expanded="false" />
-            <marker date="1499364162359" expanded="true" signature="5497:5619" ph="SELECT ${$se... ${$table}" />
-            <marker date="1499364162359" expanded="true" signature="7130:7152" ph="SELECT * FRO... ${$table}" />
-            <marker date="1499364162359" expanded="true" signature="7207:7235" ph="SELECT * FRO... ${$table}" />
-            <marker date="1499364162359" expanded="true" signature="7426:7470" ph="SELECT * FRO... ${$table}" />
-            <marker date="1499364162359" expanded="true" signature="7631:7650" ph="SELECT * FRO... users" />
-            <marker date="1499364162359" expanded="true" signature="7931:7986" ph="INSERT INTO ${$table}... " />
-            <marker date="1499364162359" expanded="true" signature="8412:8450" ph="UPDATE ${$ta... " />
-            <marker date="1499364162359" expanded="true" signature="8679:8717" ph="DELETE FROM " />
+            <element signature="n#get_all#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#2964#3144#0#PHP" expanded="false" />
+            <element signature="e#3056#3144#0#PHP" expanded="false" />
+            <element signature="n#insert#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#3495#3586#0#PHP" expanded="false" />
+            <element signature="n#update#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#3732#3824#0#PHP" expanded="false" />
+            <element signature="e#3965#4056#0#PHP" expanded="false" />
+            <element signature="n#delete#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#4234#4317#0#PHP" expanded="false" />
+            <element signature="n#bindValue#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#4377#4689#0#PHP" expanded="false" />
+            <element signature="e#4423#4678#0#PHP" expanded="false" />
+            <element signature="e#4575#4678#0#PHP" expanded="false" />
+            <element signature="e#4701#4767#0#PHP" expanded="false" />
+            <element signature="e#5177#5247#0#PHP" expanded="false" />
+            <element signature="n#setOrderBy#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#5332#5695#0#PHP" expanded="false" />
+            <element signature="e#5370#5581#0#PHP" expanded="false" />
+            <element signature="e#5737#5807#0#PHP" expanded="false" />
+            <element signature="n#setGroupBy#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#5892#6215#0#PHP" expanded="false" />
+            <element signature="e#5930#6088#0#PHP" expanded="false" />
+            <element signature="e#6257#6379#0#PHP" expanded="false" />
+            <element signature="e#7096#7128#0#PHP" expanded="false" />
+            <element signature="e#7331#7508#0#PHP" expanded="false" />
+            <element signature="e#7627#7659#0#PHP" expanded="false" />
+            <element signature="n#stringWhereOr#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#7810#8111#0#PHP" expanded="false" />
+            <element signature="e#7852#8046#0#PHP" expanded="false" />
+            <element signature="e#8176#8208#0#PHP" expanded="false" />
+            <element signature="n#stringWhereNot#0;n#Database#0;n#!!top" expanded="false" />
+            <element signature="e#8364#8695#0#PHP" expanded="false" />
+            <element signature="e#8407#8612#0#PHP" expanded="false" />
+            <element signature="e#8762#8800#0#PHP" expanded="false" />
+            <marker date="1499404721433" expanded="true" signature="2596:2699" ph="SELECT ${$se... ${$table}" />
+            <marker date="1499404721433" expanded="false" signature="3020:3042" ph="SELECT * FRO... ${$table}" />
+            <marker date="1499404721433" expanded="false" signature="3097:3125" ph="SELECT * FRO... ${$table}" />
+            <marker date="1499404721433" expanded="false" signature="3427:3482" ph="INSERT INTO ${$table}... " />
+            <marker date="1499404721433" expanded="false" signature="3908:3946" ph="UPDATE ${$ta... " />
+            <marker date="1499404721433" expanded="false" signature="4175:4213" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
