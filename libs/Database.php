@@ -69,14 +69,13 @@ class Database extends PDO {
         $str_join = $this->setJoin($this->arr_join);
         $str_order_by = $this->setOrderBy($this->arr_order_by);
         $str_group_by = $this->setGroupBy($this->arr_group_by);
-
-        list($data_where, $arr_where) = $this->stringWhere();
-        list($arr_where_or, $data_where_or) = $this->stringWhereOr();
-        list($data_where_not, $arr_where_not) = $this->stringWhereNot();
-
+        $arr_where = $this->strWhere($this->arr_where);
+        $arr_where_or = $this->strWhereOr($this->arr_where_or);
+        $arr_where_not = $this->strWhereNot($this->arr_where_not);
         $arr_query_where = $this->checkArrWhere($arr_where_or, $arr_where_not, $arr_where);
-        $th = $this->prepare("SELECT $this->arr_select FROM `$this->arr_from` $str_join $arr_query_where $str_order_by $str_group_by $limit ");
-        $data_query = array_merge($data_where, $data_where_or, $data_where_not);
+        $str_query = $str_join . $arr_query_where . $str_order_by . $str_group_by . $limit;
+        $th = $this->prepare("SELECT $this->arr_select FROM `$this->arr_from` $str_query");
+        $data_query = array_merge($this->arr_where, $this->arr_where_or, $this->arr_where_not);
         $this->bindValue($data_query, $th);
         $th->execute();
         return $th->fetchAll();
@@ -219,10 +218,22 @@ class Database extends PDO {
     }
 
     /**
-     * @return array
+     * @return null|string
      */
-    private function stringWhere() {
-        $data_where = $this->arr_where;
+    private function setLimit() {
+        $limit = NULL;
+        if ($this->limit != NULL) {
+            $limit = 'LIMIT' . $this->limit;
+        }
+        return $limit;
+    }
+
+    /**
+     * @param $data_where
+     *
+     * @return null|string
+     */
+    private function strWhere($data_where) {
         $arr_where = NULL;
         $string = NULL;
         $arr_where = NULL;
@@ -232,15 +243,16 @@ class Database extends PDO {
             }
             $arr_where = rtrim($string, " AND ");
         }
-        return array($data_where, $arr_where);
+        return $arr_where;
     }
 
     /**
-     * @return array
+     * @param $data_where_or
+     *
+     * @return null|string
      */
-    private function stringWhereOr() {
+    private function strWhereOr($data_where_or) {
         $arr_where_or = NULL;
-        $data_where_or = $this->arr_where_or;
         $string_or = NULL;
         if (!empty($data_where_or)) {
             foreach ($data_where_or as $where_or) {
@@ -248,14 +260,15 @@ class Database extends PDO {
             }
             $arr_where_or = rtrim($string_or, " OR ");
         }
-        return array($arr_where_or, $data_where_or);
+        return $arr_where_or;
     }
 
     /**
-     * @return array
+     * @param $data_where_not
+     *
+     * @return null|string
      */
-    private function stringWhereNot() {
-        $data_where_not = $this->arr_where_not;
+    private function strWhereNot($data_where_not) {
         $string_not = NULL;
         $arr_where_not = NULL;
         if (!empty($data_where_not)) {
@@ -265,17 +278,6 @@ class Database extends PDO {
             $arr_where_not = ' NOT ' . rtrim($string_not, ' AND NOT ');
 
         }
-        return array($data_where_not, $arr_where_not);
-    }
-
-    /**
-     * @return null|string
-     */
-    private function setLimit() {
-        $limit = NULL;
-        if ($this->limit != NULL) {
-            $limit = 'LIMIT' . $this->limit;
-        }
-        return $limit;
+        return $arr_where_not;
     }
 }
