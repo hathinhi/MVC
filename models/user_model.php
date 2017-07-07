@@ -10,11 +10,8 @@ class  User_Model extends Model {
     public function listUser() {
         $this->db->select();
         $this->db->from('users');
-//        $this->db->where('id', '70', '<');
-//        $this->db->where_or('age', '15', '>');
-        $this->db->where_not('username', 'nhiht');
-
         return $this->db->query();
+//        return $this->db->base_query('SELECT * FROM users');
     }
 
 
@@ -35,11 +32,12 @@ class  User_Model extends Model {
         ));
     }
 
-//    public function editUser($id) {
-//        $sth = $this->db->prepare('SELECT * FROM users WHERE id = :id');
-//        $sth->execute(array(':id' => $id));
-//        return $sth->fetch();
-//    }
+    public function editUser($id) {
+        $this->db->select();
+        $this->db->from('users');
+        $this->db->where('id', $id);
+        return $this->db->query();
+    }
 
     function editSave($data) {
         $data_update = array(

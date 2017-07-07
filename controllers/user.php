@@ -7,7 +7,7 @@ class User extends Controller {
     }
 
     function index() {
-        $this->view->users = $this->model->user_list();
+        $this->view->users = $this->model->listUser();
         $this->view->render("user/index");
     }
 
@@ -37,11 +37,11 @@ class User extends Controller {
         $data['id'] = $id;
         $data['username'] = $_POST['username'];
         $this->model->editSave($data);
-        header('location: ' . URL . 'user');
+        $this->direct('user');
     }
 
     function delete($id) {
         $this->model->delete($id);
-        header('location: ' . URL . 'user');
+        $this->direct('user');
     }
 }

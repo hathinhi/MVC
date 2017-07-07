@@ -81,6 +81,16 @@ class Database extends PDO {
         return $th->fetchAll();
     }
 
+    public function base_query($sql, $array = array(), $fetchMode = PDO::FETCH_ASSOC) {
+        $sth = $this->prepare($sql);
+        foreach ($array as $key => $value) {
+            $sth->bindValue("$key", $value);
+        }
+
+        $sth->execute();
+        return $sth->fetchAll($fetchMode);
+    }
+
     public function get_all($table = '', $limit = NULL) {
         if ($limit == NULL) {
             $th = $this->prepare("SELECT * FROM `$table`");
@@ -205,7 +215,9 @@ class Database extends PDO {
      * @return string
      */
     private function checkArrWhere($arr_where_or, $arr_where_not, $arr_where) {
-        if ($arr_where_or == NULL && $arr_where_not == NULL) {
+        if ($arr_where_or == NULL && $arr_where_not == NULL && $arr_where == NULL) {
+            $arr_query_where = '';
+        } else if ($arr_where_or == NULL && $arr_where_not == NULL) {
             $arr_query_where = 'WHERE ' . $arr_where;
         } else if ($arr_where == NULL && $arr_where_or == NULL) {
             $arr_query_where = 'WHERE ' . $arr_where_not;

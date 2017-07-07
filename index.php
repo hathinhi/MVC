@@ -1,15 +1,25 @@
 <?php
-require("libs/Controller.php");
-require("libs/View.php");
-require("libs/Model.php");
-require("libs/Bootstrap.php");
-require("libs/Database.php");
-require("libs/Session.php");
-require("libs/Hash.php");
-require("libs/Form.php");
-require("config/database.php");
 require("config/paths.php");
+require("config/database.php");
 require("util/Auth.php");
+require("libs/url_helper.php");
+require("config/autoload.php");
+
+function __autoload($class_name) {
+    $directorys = array(
+        'libs/',
+    );
+
+    //for each directory
+    foreach ($directorys as $directory) {
+        if (file_exists($directory . $class_name . '.php')) {
+            require_once($directory . $class_name . '.php');
+            return;
+        }
+    }
+}
+
 $bootstrap = new Bootstrap();
 
 ?>
+

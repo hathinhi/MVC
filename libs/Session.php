@@ -1,6 +1,9 @@
 <?php
 
 class Session {
+    public function __construct() {
+    }
+
     public static function init() {
         session_start();
     }

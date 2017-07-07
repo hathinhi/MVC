@@ -13,6 +13,12 @@ class Controller {
             $this->model = new $modelName();
         }
     }
+
+    public function direct($url) {
+        header('location:' . URL . $url);
+    }
+
 }
 
 ?>
+

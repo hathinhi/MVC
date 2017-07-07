@@ -7,7 +7,8 @@
             <td></td>
             <td></td>
         </tr>
-        <?php foreach ($this->users as $i => $user) { ?>
+        <?php foreach ($this->users as $i => $user) {
+            ?>
             <tr>
                 <td><?php echo $user['username']; ?></td>
                 <td><a href="<?php echo URL; ?>user/edit/<?php echo $user['id'] ?>">Edit</a></td>
