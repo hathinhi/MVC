@@ -5,7 +5,8 @@ class Home extends Controller {
         parent::__construct();
         $this->view->title = 'Home';
         Auth::handleLogin();
-        $this->view->js = array('home/js/default.js');
+        $this->view->js = array('public/js/default.js,TRUE','public/js/default1.js');
+        $this->view->css = array('public/css/default.css');
     }
 
     function index() {

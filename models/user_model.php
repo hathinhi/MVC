@@ -11,7 +11,6 @@ class  User_Model extends Model {
         $this->db->select();
         $this->db->from('users');
         return $this->db->query();
-//        return $this->db->base_query('SELECT * FROM users');
     }
 
 

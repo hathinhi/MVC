@@ -1,0 +1,10 @@
+nbproject
+._*
+.~lock.*
+.buildpath
+.DS_Store
+._DS_Store
+.idea
+.iml
+.project
+.settings

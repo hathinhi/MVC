@@ -3,13 +3,22 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="stylesheet" type="text/css" href="<?php echo URL ?>public/css/default.css">
-    <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.js"></script>
-    <title><?=(isset($this->title)) ? $this->title : 'MVC'; ?></title>
+    <script type="text/javascript" src="<?php echo base_url('public/js/jquery.js'); ?>"></script>
+    <title><?= (isset($this->title)) ? $this->title : 'MVC'; ?></title>
+    <?php
+    if (isset($this->css)) {
+        foreach ($this->css as $css) {
+            echo '<link rel="stylesheet" type="text/css" href="' . base_url($css) . '">';
+        }
+    }
+    ?>
     <?php
     if (isset($this->js)) {
         foreach ($this->js as $js) {
-            echo '<script type="text/javascript" src="' . URL . 'views/' . $js . '"></script>';
+            $js = explode(',', $js);
+            if (!isset($js[1])) {
+                echo '<script type="text/javascript" src="' . base_url($js[0]) . '"></script>';
+            }
         }
     }
     ?>
@@ -19,7 +28,7 @@
     <div id="header">
         <h1>HEADER</h1><br/>
         <br>
-        <a href="<?php echo URL ?>help">Help</a>
-        <a href="<?php echo URL ?>index">Index</a>
-        <a href="<?php echo URL ?>login">Login</a>
+        <a href="<?php echo site_url('help') ?>">Help</a>
+        <a href="<?php echo site_url('index') ?>">Index</a>
+        <a href="<?php echo site_url('login') ?>">Login</a>
     </div>
