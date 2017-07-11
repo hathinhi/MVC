@@ -1,18 +1,35 @@
 <?php
 
 class User extends Controller {
+    private $_path = NULL;
+    const VIEW_PATH = "views/";
+
     public function __construct() {
         parent::__construct();
         Auth::handleLogin();
+        $this->loadModel('user');
+        $this->view->js = array('public/js/default.js,TRUE', 'public/js/default1.js');
+        $this->view->css = array('public/css/default.css');
+        $this->_path = $this->set_template('default');
     }
 
     function index() {
-        $this->view->users = $this->model->listUser();
-        $this->view->render("user/index");
+        if (file_exists(self::VIEW_PATH . $this->_path . ".php")) {
+            ob_start();
+            $this->view->users = $this->user->listUser();
+            $this->view->render("user/index");
+            $content = ob_get_contents();
+            ob_end_clean();
+            $this->view->content = $content;
+            $this->view->render($this->_path);
+        } else {
+            $this->view->users = $this->user->listUser();
+            $this->view->render("user/index");
+        }
     }
 
     function select() {
-        $data = $this->model->listUser();
+        $data = $this->user->listUser();
         echo "<pre>";
         var_dump($data);
     }
@@ -24,24 +41,24 @@ class User extends Controller {
     function addSave() {
         $data['username'] = $_POST['username'];
         $data['password'] = $_POST['password'];
-        $this->model->addSave($data);
+        $this->user->addSave($data);
         header('location: ' . URL . 'user');
     }
 
     function edit($id) {
-        $this->view->user = $this->model->editUser($id);
+        $this->view->user = $this->user->editUser($id);
         $this->view->render("user/edit");
     }
 
     function editSave($id) {
         $data['id'] = $id;
         $data['username'] = $_POST['username'];
-        $this->model->editSave($data);
+        $this->user->editSave($data);
         $this->direct('user');
     }
 
     function delete($id) {
-        $this->model->delete($id);
+        $this->user->delete($id);
         $this->direct('user');
     }
 }

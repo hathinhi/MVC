@@ -21,22 +21,18 @@ class Bootstrap {
 
     public function setControllerPath($path) {
         $this->_controllerPath = trim($path, '/') . '/';
-        var_dump('1');
     }
 
     public function setModelPath($path) {
         $this->_modelPath = trim($path, '/') . '/';
-        var_dump('1');
     }
 
     public function setErrorFile($path) {
         $this->_errorFile = trim($path, '/');
-        var_dump('1');
     }
 
     public function setDefaultFile($path) {
         $this->_defaultFile = trim($path, '/');
-        var_dump('1');
     }
 
     /**
@@ -65,7 +61,6 @@ class Bootstrap {
             return FALSE;
         }
         $this->_controller = new $this->_url[0];
-        $this->_controller->loadModel($this->_url[0]);
     }
 
     private function _callControllerMethod() {
