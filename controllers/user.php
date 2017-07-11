@@ -10,22 +10,12 @@ class User extends Controller {
         $this->loadModel('user');
         $this->view->js = array('public/js/default.js,TRUE', 'public/js/default1.js');
         $this->view->css = array('public/css/default.css');
-        $this->_path = $this->set_template('default');
+        $this->view->set_template('default');
     }
 
     function index() {
-        if (file_exists(self::VIEW_PATH . $this->_path . ".php")) {
-            ob_start();
-            $this->view->users = $this->user->listUser();
-            $this->view->render("user/index");
-            $content = ob_get_contents();
-            ob_end_clean();
-            $this->view->content = $content;
-            $this->view->render($this->_path);
-        } else {
-            $this->view->users = $this->user->listUser();
-            $this->view->render("user/index");
-        }
+        $this->view->users = $this->user->listUser();
+        $this->view->render("user/index");
     }
 
     function select() {
