@@ -1,6 +1,6 @@
 <?php
 require_once "config/migration.php";
-require_once "DatabaseConnector.php";
+require_once "Database.php";
 
 class Migration {
     const MIGRATION_PATH = 'migrations/';
@@ -10,7 +10,7 @@ class Migration {
     protected $_fileName = array();
 
     public function __construct() {
-        $this->db = new DatabaseConnector(DB_TYPE, DB_HOST, DB_NAME, DB_USER, DB_PASS);
+        $this->db = new Database(DB_TYPE, DB_HOST, DB_NAME, DB_USER, DB_PASS);
         if (!$this->table_exist()) {
             $this->creat_table();
         }

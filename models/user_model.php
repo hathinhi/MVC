@@ -10,7 +10,7 @@ class  User_Model extends Model {
     public function listUser() {
         $this->db->select();
         $this->db->from('users');
-        return $this->db->query();
+        return $this->db->query_table();
     }
 
     public function run() {
@@ -54,7 +54,7 @@ class  User_Model extends Model {
         $this->db->select();
         $this->db->from('users');
         $this->db->where('id', $id);
-        return $this->db->query();
+        return $this->db->query_table();
     }
 
     function editSave($data) {

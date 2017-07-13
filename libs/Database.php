@@ -69,7 +69,7 @@ class Database extends PDO {
         $this->type = $type;
     }
 
-    public function query() {
+    public function query_table() {
         if (empty($this->arr_select) || empty($this->arr_from)) {
             return "Error syntax";
             exit;
@@ -98,6 +98,13 @@ class Database extends PDO {
 
         $sth->execute();
         return $sth->fetchAll($fetchMode);
+    }
+
+    public function query_struct($sql) {
+        $this->query($sql);
+        if ($this->query($sql) == FALSE) {
+            die("error" . print_r($this->errorinfo()[2]));
+        }
     }
 
     public function get_all($table = '', $limit = NULL) {
