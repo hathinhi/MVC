@@ -19,6 +19,15 @@ class Database extends PDO {
     protected $arr_order_by = array();
     protected $arr_group_by = array();
 
+    /**
+     * Database constructor.
+     *
+     * @param $DB_TYPE
+     * @param $DB_HOST
+     * @param $DB_NAME
+     * @param $DB_USER
+     * @param $DB_PASS
+     */
     public function __construct($DB_TYPE, $DB_HOST, $DB_NAME, $DB_USER, $DB_PASS) {
         parent::__construct($DB_TYPE . ':host=' . $DB_HOST . ';dbname=' . $DB_NAME, $DB_USER, $DB_PASS);
     }

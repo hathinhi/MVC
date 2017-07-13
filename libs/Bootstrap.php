@@ -17,6 +17,7 @@ class Bootstrap {
         }
         $this->_loadExistingController();
         $this->_callControllerMethod();
+        $migration = new Migration();
     }
 
     public function setControllerPath($path) {

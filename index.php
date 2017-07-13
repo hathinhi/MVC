@@ -1,5 +1,6 @@
 <?php
 require("config/paths.php");
+require("libs/Migration.php");
 require("config/database.php");
 require("util/Auth.php");
 require("libs/url_helper.php");
@@ -20,6 +21,5 @@ function __autoload($class_name) {
 }
 
 $bootstrap = new Bootstrap();
-
 ?>
 

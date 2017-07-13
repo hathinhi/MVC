@@ -13,6 +13,25 @@ class  User_Model extends Model {
         return $this->db->query();
     }
 
+    public function run() {
+        $username = $_POST['username'];
+        $pass = $_POST['pass'];
+        $this->db->select();
+        $this->db->from('users');
+        $sth = $this->db->prepare("SELECT * FROM `users`
+        WHERE username=:username AND password=:pass");
+        $sth->execute(array(
+            ':username' => $username,
+            ':pass'     => Hash::create('md5', $pass, 1),
+        ));
+        if ($sth->rowCount() > 0) {
+            Session::init();
+            Session::set('logIn', TRUE);
+            header('Location:../home');
+        } else {
+            header('Location:../login');
+        }
+    }
 
     function get_all() {
         $data = $this->db->get_all('users', 2);

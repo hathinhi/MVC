@@ -1,7 +1,6 @@
 <?php
 
 class User extends Controller {
-    private $_path = NULL;
     const VIEW_PATH = "views/";
 
     public function __construct() {
@@ -32,7 +31,7 @@ class User extends Controller {
         $data['username'] = $_POST['username'];
         $data['password'] = $_POST['password'];
         $this->user->addSave($data);
-        header('location: ' . URL . 'user');
+        $this->direct('user');
     }
 
     function edit($id) {
