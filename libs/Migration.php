@@ -8,13 +8,18 @@ class Migration {
     protected $_className = array();
     protected $_classNameUp = array();
     protected $_fileName = array();
+    protected $_current_version = NULL;
 
-    public function __construct() {
+    public function __construct($test = FALSE) {
         $this->db = new Database(DB_TYPE, DB_HOST, DB_NAME, DB_USER, DB_PASS);
         if (!$this->table_exist()) {
             $this->creat_table();
         }
-        $this->set_migration();
+        $current_version = $this->current_version();
+        $this->_current_version = empty($current_version) ? NULL : $current_version[0]['version'];
+        if ($test) {
+            $this->set_migration();
+        }
 
     }
 
@@ -40,7 +45,7 @@ class Migration {
                 array_push($this->_version, $version);
                 if (((int)$version > (int)VER_MIGRATION)) {
                     array_push($this->_className, $className);
-                } else {
+                } else if ((int)$version > (int)$this->_current_version) {
                     array_push($this->_classNameUp, $className);
                 }
                 array_push($this->_fileName, $value);
@@ -60,39 +65,40 @@ class Migration {
     }
 
     private function set_migration() {
-        $version = $this->fileMigration();
-        $target_version = VER_MIGRATION;
-        $last_version = $version[1];
-        $current_version = $this->current_version();
-        $current_version = empty($current_version) ? NULL : $current_version[0]['version'];
+        if (VER_MIGRATION == NULL) {
+            echo "Config version is not null";
+            exit();
+        }
+        $this->fileMigration();
         foreach ($this->_fileName as $file) {
             require_once self::MIGRATION_PATH . $file;
         }
-        if (((int)$target_version < (int)$current_version) && ($current_version != NULL)) {
-            foreach ($this->_className as $class) {
-                $className = new $class();
-                $className->down($this->db);
-            }
-        } else {
-            foreach ($this->_classNameUp as $class) {
-                $className = new $class();
-                $className->up($this->db);
-                if ($version > $current_version) {
-                }
-                if ($current_version == NULL) {
-                    $sth = $this->db->prepare("INSERT INTO migration_ver(`version`) VALUE (:version)");
-                    $sth->bindValue(":version", $last_version);
-                    $sth->execute();
+        var_dump('sds', $this->_classNameUp);
+        if ((int)$this->_current_version == (int)VER_MIGRATION) {
 
-                } else {
-                    $sth = $this->db->prepare("UPDATE `migration_ver` SET version = :version");
-                    $sth->bindValue(":version", $last_version);
-                    $sth->execute();
+        } else {
+            if (((int)VER_MIGRATION < (int)$this->_current_version) && ($this->_current_version != NULL)) {
+                foreach ($this->_className as $class) {
+                    $className = new $class();
+                    $className->down();
+
+                }
+            } else {
+                foreach ($this->_classNameUp as $class) {
+                    $className = new $class();
+                    $className->up();
                 }
             }
+        }
+        if ($this->_current_version == NULL) {
+            $sth = $this->db->prepare("INSERT INTO migration_ver(`version`) VALUE (:version)");
+            $sth->bindValue(":version", VER_MIGRATION);
+            $sth->execute();
+        } else {
+            $sth = $this->db->prepare("UPDATE `migration_ver` SET version = :version");
+            $sth->bindValue(":version", VER_MIGRATION);
+            $sth->execute();
         }
     }
 
 }
-
-?>

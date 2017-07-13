@@ -21,5 +21,4 @@ function __autoload($class_name) {
 }
 
 $bootstrap = new Bootstrap();
-?>
 

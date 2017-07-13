@@ -100,12 +100,6 @@ class Database extends PDO {
         return $sth->fetchAll($fetchMode);
     }
 
-    public function query_struct($sql) {
-        $this->query($sql);
-        if ($this->query($sql) == FALSE) {
-            die("error" . print_r($this->errorinfo()[2]));
-        }
-    }
 
     public function get_all($table = '', $limit = NULL) {
         if ($limit == NULL) {
@@ -272,6 +266,14 @@ class Database extends PDO {
             $arr_where = rtrim($string, " AND ");
         }
         return $arr_where;
+    }
+
+    public function query_struct($sql) {
+        $result = $this->query($sql);
+        if ($result == FALSE) {
+            print_r($this->errorinfo()[2]);
+            exit();
+        }
     }
 
     /**
