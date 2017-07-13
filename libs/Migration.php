@@ -73,9 +73,8 @@ class Migration {
         foreach ($this->_fileName as $file) {
             require_once self::MIGRATION_PATH . $file;
         }
-        var_dump('sds', $this->_classNameUp);
         if ((int)$this->_current_version == (int)VER_MIGRATION) {
-
+            return FALSE;
         } else {
             if (((int)VER_MIGRATION < (int)$this->_current_version) && ($this->_current_version != NULL)) {
                 foreach ($this->_className as $class) {

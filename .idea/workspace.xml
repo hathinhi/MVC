@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="080bd9d2-5262-411d-8ded-8a701d730574" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/migrations/20170712100000_Init.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/migrations/20170712170000_Demo2.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/migrations/20170712180000_Demo3.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/migrations/20170713100000_Add.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/migrations/20170712140000_Demo.php" afterPath="$PROJECT_DIR$/migrations/20170713150000_Demo1.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/migrations/20170712160000_Demo1.php" afterPath="$PROJECT_DIR$/migrations/20170713160000_Demo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/migration.php" afterPath="$PROJECT_DIR$/config/migration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/Bootstrap.php" afterPath="$PROJECT_DIR$/libs/Bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/Database.php" afterPath="$PROJECT_DIR$/libs/Database.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/Migration.php" afterPath="$PROJECT_DIR$/libs/Migration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/Model.php" afterPath="$PROJECT_DIR$/libs/Model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migrations/20170713160000_Demo.php" afterPath="$PROJECT_DIR$/migrations/20170713160000_Demo.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,16 +30,16 @@
       <file leaf-file-name="Migration.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/libs/Migration.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="47" column="74" lean-forward="false" selection-start-line="47" selection-start-column="74" selection-end-line="47" selection-end-column="74" />
+            <state relative-caret-position="180">
+              <caret line="79" column="22" lean-forward="false" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="22" />
               <folding>
                 <element signature="n#table_exist#0;n#Migration#0;n#!!top" expanded="false" />
                 <element signature="n#creat_table#0;n#Migration#0;n#!!top" expanded="false" />
                 <element signature="e#2333#2438#0#PHP" expanded="false" />
-                <marker date="1499935678311" expanded="true" signature="1046:1081" ph="SELECT versi... migration_ver" />
-                <marker date="1499935678311" expanded="true" signature="2079:2237" ph="CREATE TABLE... IF" />
-                <marker date="1499935678311" expanded="true" signature="3274:3327" ph="INSERT INTO migration_ver... " />
-                <marker date="1499935678311" expanded="true" signature="3472:3517" ph="UPDATE `migr... " />
+                <marker date="1499935935973" expanded="true" signature="1046:1081" ph="SELECT versi... migration_ver" />
+                <marker date="1499935935973" expanded="true" signature="2079:2237" ph="CREATE TABLE... IF" />
+                <marker date="1499935935973" expanded="true" signature="3253:3306" ph="INSERT INTO migration_ver... " />
+                <marker date="1499935935973" expanded="true" signature="3451:3496" ph="UPDATE `migr... " />
               </folding>
             </state>
           </provider>
@@ -69,10 +58,10 @@
       <file leaf-file-name="20170713160000_Demo.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/migrations/20170713160000_Demo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="23" />
+            <state relative-caret-position="69">
+              <caret line="13" column="43" lean-forward="false" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
               <folding>
-                <marker date="1499934801506" expanded="true" signature="290:609" ph="CREATE TABLE... demos" />
+                <marker date="1499935935969" expanded="true" signature="266:585" ph="CREATE TABLE... demos" />
               </folding>
             </state>
           </provider>
@@ -215,8 +204,8 @@
         <option value="$PROJECT_DIR$/migrations/20170713140000_Demo.php" />
         <option value="$PROJECT_DIR$/migrations/20170713150000_Demo1.php" />
         <option value="$PROJECT_DIR$/libs/Database.php" />
-        <option value="$PROJECT_DIR$/migrations/20170713160000_Demo.php" />
         <option value="$PROJECT_DIR$/config/migration.php" />
+        <option value="$PROJECT_DIR$/migrations/20170713160000_Demo.php" />
         <option value="$PROJECT_DIR$/libs/Migration.php" />
       </list>
     </option>
@@ -837,7 +826,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168296000" />
+    <option name="totallyTimeSpent" value="169165000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -863,7 +852,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2260062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30383712" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1309,6 +1298,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/migrations/20170713160000_Demo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="13" column="43" lean-forward="false" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <folding>
+            <marker date="1499935935969" expanded="true" signature="266:585" ph="CREATE TABLE... demos" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/migration.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1317,28 +1316,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/migrations/20170713160000_Demo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="23" />
-          <folding>
-            <marker date="1499934801506" expanded="true" signature="290:609" ph="CREATE TABLE... demos" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libs/Migration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="47" column="74" lean-forward="false" selection-start-line="47" selection-start-column="74" selection-end-line="47" selection-end-column="74" />
+        <state relative-caret-position="180">
+          <caret line="79" column="22" lean-forward="false" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="22" />
           <folding>
             <element signature="n#table_exist#0;n#Migration#0;n#!!top" expanded="false" />
             <element signature="n#creat_table#0;n#Migration#0;n#!!top" expanded="false" />
             <element signature="e#2333#2438#0#PHP" expanded="false" />
-            <marker date="1499935678311" expanded="true" signature="1046:1081" ph="SELECT versi... migration_ver" />
-            <marker date="1499935678311" expanded="true" signature="2079:2237" ph="CREATE TABLE... IF" />
-            <marker date="1499935678311" expanded="true" signature="3274:3327" ph="INSERT INTO migration_ver... " />
-            <marker date="1499935678311" expanded="true" signature="3472:3517" ph="UPDATE `migr... " />
+            <marker date="1499935935973" expanded="true" signature="1046:1081" ph="SELECT versi... migration_ver" />
+            <marker date="1499935935973" expanded="true" signature="2079:2237" ph="CREATE TABLE... IF" />
+            <marker date="1499935935973" expanded="true" signature="3253:3306" ph="INSERT INTO migration_ver... " />
+            <marker date="1499935935973" expanded="true" signature="3451:3496" ph="UPDATE `migr... " />
           </folding>
         </state>
       </provider>
