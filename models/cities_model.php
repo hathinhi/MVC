@@ -16,6 +16,6 @@ class  Cities_Model extends Model {
     public function listCity() {
         $this->db->select();
         $this->db->from($this->_table);
-        return $this->db->query_table();
+        return $this->db->query_db();
     }
 }

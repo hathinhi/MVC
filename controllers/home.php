@@ -5,16 +5,13 @@ class Home extends Controller {
         parent::__construct();
         $this->view->title = 'Home';
         Auth::handleLogin();
-        $this->loadModel('user');
-        $this->loadModel('cities');
+        $this->view->js = array('public/js/default.js,TRUE', 'public/js/default1.js');
+        $this->view->css = array('public/css/default.css');
+        $this->view->set_template('default');
     }
 
     function index() {
-        $this->view->render('header');
-        $this->view->users = $this->user->listUser();
-        $this->view->cities = $this->cities->listCity();
         $this->view->render("home/index");
-        $this->view->render('footer');
     }
 
 }

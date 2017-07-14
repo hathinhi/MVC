@@ -5,7 +5,7 @@ require("config/database.php");
 require("util/Auth.php");
 require("libs/url_helper.php");
 require("config/autoload.php");
-
+require("config/login.php");
 function __autoload($class_name) {
     $directorys = array(
         'libs/',

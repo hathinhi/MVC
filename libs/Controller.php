@@ -17,7 +17,7 @@ class Controller {
         }
     }
 
-    public function direct($url) {
+    public function direct($url = NULL) {
         header('location:' . URL . $url);
     }
 

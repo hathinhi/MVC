@@ -5,4 +5,4 @@
  * Date: 12/07/2017
  * Time: 10:07
  */
-define('VER_MIGRATION', '20170713160000');
+define('VER_MIGRATION', '20170714140000');

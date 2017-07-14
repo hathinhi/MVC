@@ -18,6 +18,7 @@ class Bootstrap {
         $this->_loadExistingController();
         $this->_callControllerMethod();
         $migration = new Migration(TRUE);
+        $this->setLogin();
     }
 
     public function setControllerPath($path) {
@@ -55,13 +56,20 @@ class Bootstrap {
     private function _loadExistingController() {
 
         $file = $this->_controllerPath . $this->_url[0] . '.php';
-        if (file_exists($file)) {
-            require $file;
+        if ($this->_url[0] == 'login') {
+            require "libs/Auth/controller/login_auth.php";
+            $login_auth = new Login_Auth();
+            $login_auth->index();
+            exit;
         } else {
-            $this->_error();
-            return FALSE;
+            if (file_exists($file)) {
+                require $file;
+            } else {
+                $this->_error();
+                return FALSE;
+            }
+            $this->_controller = new $this->_url[0];
         }
-        $this->_controller = new $this->_url[0];
     }
 
     private function _callControllerMethod() {
@@ -92,4 +100,13 @@ class Bootstrap {
         $controller->index();
         exit;
     }
+
+//    private function setLogin() {
+//        if (!LOGIN) {
+//            require "libs/Auth/controller/login_auth.php";
+//            $controller = new Login();
+//            $controller->index();
+//            exit;
+//        }
+//    }
 }

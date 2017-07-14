@@ -3,7 +3,9 @@
 class Index extends Controller {
     public function __construct() {
         parent::__construct();
-        Auth::handleLogin();
+        if (LOGIN) {
+            Auth::handleLogin();
+        }
     }
 
     function index() {
