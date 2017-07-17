@@ -5,6 +5,9 @@ class Index extends Controller {
         parent::__construct();
         if (LOGIN) {
             Auth::handleLogin();
+        } else {
+            Session::init();
+            Session::set('login', TRUE);
         }
     }
 

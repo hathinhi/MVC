@@ -1,9 +1,15 @@
 <?php
 
-class Login_Auth extends Controller {
+/**
+ * Created by IntelliJ IDEA.
+ * User: nhiha
+ * Date: 17/07/2017
+ * Time: 11:21
+ */
+class Login extends Controller {
     public function __construct() {
         parent::__construct();
-        $this->loadModel('users');
+        $this->loadModel('user', TRUE);
         $this->view->js = array('public/js/login/login.js');
         $this->view->css = array('public/css/login/login.css');
         $this->view->set_template('login');
@@ -14,16 +20,15 @@ class Login_Auth extends Controller {
     }
 
     public function run() {
-        var_dump('123466');
         $username = $_POST['username'];
         $pass = $_POST['pass'];
-        $login = $this->users->login($username, $pass);
+        $login = $this->user->login($username, $pass);
         if ($login) {
             Session::init();
             Session::set('login', TRUE);
             $this->direct('home');
         } else {
-            $this->direct('login');
+            $this->direct('Auth/login');
         }
     }
 }

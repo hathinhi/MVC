@@ -1,15 +1,18 @@
 <?php
 
 class Bootstrap {
+    private $_controllerBasePath = 'libs/Auth/controller/';
+
     private $_url = NULL;
     private $_controller = NULL;
-
     private $_controllerPath = 'controllers/';
     private $_modelPath = 'models/';
     private $_errorFile = 'error.php';
     private $_defaultFile = 'index.php';
 
     public function __construct() {
+        $model = new ModelBase();
+        $migration = new Migration(TRUE);
         $this->_getUrl();
         if (empty($this->_url[0])) {
             $this->_loadControllerDefault();
@@ -17,8 +20,6 @@ class Bootstrap {
         }
         $this->_loadExistingController();
         $this->_callControllerMethod();
-        $migration = new Migration(TRUE);
-        $this->setLogin();
     }
 
     public function setControllerPath($path) {
@@ -54,13 +55,9 @@ class Bootstrap {
     }
 
     private function _loadExistingController() {
-
         $file = $this->_controllerPath . $this->_url[0] . '.php';
-        if ($this->_url[0] == 'login') {
-            require "libs/Auth/controller/login_auth.php";
-            $login_auth = new Login_Auth();
-            $login_auth->index();
-            exit;
+        if ($this->_url[0] === 'Auth') {
+            return $this->_loadBaseController();
         } else {
             if (file_exists($file)) {
                 require $file;
@@ -101,12 +98,37 @@ class Bootstrap {
         exit;
     }
 
-//    private function setLogin() {
-//        if (!LOGIN) {
-//            require "libs/Auth/controller/login_auth.php";
-//            $controller = new Login();
-//            $controller->index();
-//            exit;
-//        }
-//    }
+    /**
+     * @return bool
+     */
+    private function _loadBaseController() {
+        $file = $this->_controllerBasePath . $this->_url[1] . '.php';
+        if (file_exists($file)) {
+            require $file;
+            $this->_controller = new $this->_url[1];
+            $length = count($this->_url);
+            if ($length > 2) {
+                if (!method_exists($this->_controller, $this->_url[2])) {
+                    $this->_error();
+                }
+            }
+            //Controller->Method(Param1, Param2, Param3,.....)
+            if ($length == 2) {
+                $this->_controller->index();
+            } else {
+                $link_url = NULL;
+                for ($i = 3; $i < $length; $i++) {
+                    if (isset($this->_url[$i])) {
+                        $link_url .= $this->_url[$i] . ',';
+                    }
+                }
+                $link_url = rtrim($link_url, ',');
+                $this->_controller->{$this->_url[2]}($link_url);
+            }
+        } else {
+            $this->_error();
+            return FALSE;
+        }
+        exit();
+    }
 }

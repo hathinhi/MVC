@@ -8,7 +8,7 @@ class View {
     public function __construct() {
     }
 
-    public function render($url, $noInclude = FALSE) {
+    public function render($url) {
         if (file_exists(self::VIEW_PATH . $this->_template . ".php")) {
             ob_start();
             $this->load($url);
@@ -17,7 +17,7 @@ class View {
             $this->content = $content;
             $this->load($this->_template);
         } else {
-            require 'views/' . $url . '.php';
+            require self::VIEW_PATH . $url . '.php';
         }
 
     }

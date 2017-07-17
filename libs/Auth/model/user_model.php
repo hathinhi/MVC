@@ -14,10 +14,10 @@ class  User_Model extends Model {
     }
 
     public function login($username, $password) {
-        $this->db->select();
+        $this->db->select('id');
         $this->db->from($this->_table);
         $this->db->where(COLUMN[0], $username);
-        $this->db->where(COLUMN[1], $password);
+        $this->db->where(COLUMN[1], Hash::create('md5', $password, 1));
         $result = $this->db->query_db();
         if ($result) {
             return TRUE;

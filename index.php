@@ -3,9 +3,10 @@ require("config/paths.php");
 require("libs/Migration.php");
 require("config/database.php");
 require("util/Auth.php");
-require("libs/url_helper.php");
+require("libs/urlHelper.php");
 require("config/autoload.php");
 require("config/login.php");
+require('libs/Auth/lib/modelBase.php');
 function __autoload($class_name) {
     $directorys = array(
         'libs/',
@@ -19,6 +20,5 @@ function __autoload($class_name) {
         }
     }
 }
-
 $bootstrap = new Bootstrap();
 

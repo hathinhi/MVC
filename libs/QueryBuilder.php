@@ -6,7 +6,7 @@
  * Date: 13/07/2017
  * Time: 16:29
  */
-abstract class QueryBuilder extends PDO{
+abstract class QueryBuilder extends PDO {
     /**
      * DB Select data
      *
@@ -155,7 +155,7 @@ abstract class QueryBuilder extends PDO{
      */
     public function query_db() {
         if (empty($this->arr_select) || empty($this->arr_from)) {
-            return "Error syntax";
+            return "Error syntax" . $this->arr_select . $this->arr_from;
             exit;
         }
         $limit = $this->setLimit();

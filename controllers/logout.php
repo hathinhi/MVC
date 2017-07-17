@@ -5,7 +5,7 @@ class Logout extends Controller {
         parent::__construct();
         Session::init();
         Session::destroy();
-        header('Location:login');
+        $this->direct('Auth/login');
     }
 
 }

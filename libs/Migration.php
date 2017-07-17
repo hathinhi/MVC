@@ -20,7 +20,6 @@ class Migration {
         if ($test) {
             $this->set_migration();
         }
-
     }
 
     private function table_exist() {
