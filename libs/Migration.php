@@ -1,6 +1,4 @@
 <?php
-require_once "config/migration.php";
-require_once "Database.php";
 
 class Migration {
     const MIGRATION_PATH = 'migrations/';

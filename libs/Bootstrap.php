@@ -1,8 +1,6 @@
 <?php
 
 class Bootstrap {
-    private $_controllerBasePath = 'libs/Auth/controller/';
-
     private $_url = NULL;
     private $_controller = NULL;
     private $_controllerPath = 'controllers/';
@@ -11,8 +9,6 @@ class Bootstrap {
     private $_defaultFile = 'index.php';
 
     public function __construct() {
-        $model = new ModelBase();
-        $migration = new Migration(TRUE);
         $this->_getUrl();
         if (empty($this->_url[0])) {
             $this->_loadControllerDefault();
@@ -57,7 +53,8 @@ class Bootstrap {
     private function _loadExistingController() {
         $file = $this->_controllerPath . $this->_url[0] . '.php';
         if ($this->_url[0] === 'Auth') {
-            return $this->_loadBaseController();
+            $base_url = 'libs/Auth/controller/';
+            return $this->_loadBaseController($base_url);
         } else {
             if (file_exists($file)) {
                 require $file;
@@ -101,8 +98,8 @@ class Bootstrap {
     /**
      * @return bool
      */
-    private function _loadBaseController() {
-        $file = $this->_controllerBasePath . $this->_url[1] . '.php';
+    private function _loadBaseController($base_url) {
+        $file = $base_url . $this->_url[1] . '.php';
         if (file_exists($file)) {
             require $file;
             $this->_controller = new $this->_url[1];

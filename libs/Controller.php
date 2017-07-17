@@ -2,7 +2,6 @@
 
 class Controller {
     const MODEL_PATH = "models/";
-    const MODEL_AUTH_PATH = 'libs/Auth/model/';
     protected $_models = array();
 
     public function __construct() {
@@ -11,7 +10,7 @@ class Controller {
 
     public function loadModel($name, $auth = FALSE) {
         if ($auth) {
-            $path = self::MODEL_AUTH_PATH . $name . '_model.php';
+            $path = $auth . $name . '_model.php';
         } else {
             $path = self::MODEL_PATH . $name . '_model.php';
         }
