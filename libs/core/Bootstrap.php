@@ -42,6 +42,7 @@ class Bootstrap {
         $url = rtrim($url, "/");
         $url = filter_var($url, FILTER_SANITIZE_URL);
         $this->_url = explode('/', $url);
+        $this->_url = $this->arraytolower($this->_url);
     }
 
     private function _loadControllerDefault() {
@@ -52,7 +53,7 @@ class Bootstrap {
 
     private function _loadExistingController() {
         $file = $this->_controllerPath . $this->_url[0] . '.php';
-        if ($this->_url[0] === 'Auth') {
+        if (strtolower($this->_url[0]) === 'auth') {
             $base_url = 'libs/Auth/controller/';
             return $this->_loadBaseController($base_url);
         } else {
@@ -127,5 +128,35 @@ class Bootstrap {
             return FALSE;
         }
         exit();
+    }
+
+    /**
+     *Convert url to lower
+     *
+     * @param      $array
+     * @param bool $include_leys
+     *
+     * @return mixed
+     */
+    function arraytolower($array, $include_leys = FALSE) {
+
+        if ($include_leys) {
+            foreach ($array as $key => $value) {
+                if (is_array($value))
+                    $array2[strtolower($key)] = arraytolower($value, $include_leys);
+                else
+                    $array2[strtolower($key)] = strtolower($value);
+            }
+            $array = $array2;
+        } else {
+            foreach ($array as $key => $value) {
+                if (is_array($value))
+                    $array[$key] = arraytolower($value, $include_leys);
+                else
+                    $array[$key] = strtolower($value);
+            }
+        }
+
+        return $array;
     }
 }
