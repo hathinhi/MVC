@@ -7,7 +7,7 @@ class User extends Controller {
         parent::__construct();
         Auth::handleLogin();
         $this->loadModel('user');
-        $this->view->js = array('public/js/default.js,TRUE', 'public/js/default1.js');
+        $this->view->js = array('public/js/default.js,TRUE');
         $this->view->css = array('public/css/default.css');
         $this->view->set_template('default');
     }
