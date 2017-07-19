@@ -33,6 +33,5 @@ if (in_array('AuthLogin', AUTOLOAD)) {
 if (in_array('Migration', AUTOLOAD)) {
     $migration = new Migration(TRUE);
 }
-
 $bootstrap = new Bootstrap();
 

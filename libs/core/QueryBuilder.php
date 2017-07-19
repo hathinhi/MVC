@@ -211,6 +211,20 @@ abstract class QueryBuilder extends PDO {
         return $th->fetchAll();
     }
 
+
+    /**
+     * tra ve 1 phan tu
+     * @param string $table
+     * @param        $id
+     *
+     * @return array
+     */
+    public function get_by($table = '', $id) {
+        $th = $this->prepare("SELECT * FROM `$table` WHERE id=$id LIMIT 1");
+        $th->execute();
+        return $th->fetchAll();
+    }
+
     /**
      * Insert database
      *
