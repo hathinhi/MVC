@@ -9,6 +9,7 @@ if (file_exists(APPPATH . 'config/database.php')) {
 if (file_exists(APPPATH . 'config/login.php')) {
     require_once(APPPATH . 'config/login.php');
 }
+
 if (file_exists(APPPATH . 'config/migration.php')) {
     require_once(APPPATH . 'config/migration.php');
 }

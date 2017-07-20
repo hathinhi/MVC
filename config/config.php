@@ -4,7 +4,7 @@ define('LIBS', 'libs/');
 define('ICONV_ENABLED', FALSE);
 define('MB_ENABLED', FALSE);
 define('Composer', TRUE);
-define('language','vietnamese');
+define('language', 'vietnamese');
 
 $_autoload['libs'] = array(
     'Session',
@@ -12,6 +12,7 @@ $_autoload['libs'] = array(
     'Migration',
     'Hash',
     'Email',
+    'Lang',
 );
 
 $config = Array(

@@ -6,6 +6,10 @@ class View {
     private $_template = NULL;
 
     public function __construct() {
+        if (in_array('Lang', AUTOLOAD)) {
+            $language = new Lang();
+            $this->lang = $language->load();
+        }
     }
 
     public function render($url) {
