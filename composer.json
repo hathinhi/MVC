@@ -1,6 +1,14 @@
 {
+  "name": "MVC base",
   "description": "The Application with Composer",
+  "authors": [
+    {
+      "name": "NhiHa",
+      "email": "hanhi.hust@gmail.com"
+    }],
   "require": {
-    "php": ">=5.6.2"
+    "php": ">=5.6.2",
+    "phpmailer/phpmailer": "^5.2",
+    "nesbot/carbon": "^1.22"
   }
 }

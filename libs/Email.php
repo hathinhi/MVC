@@ -338,11 +338,6 @@ class Email {
      * @return    void
      */
     public function __construct(array $config = array()) {
-        $this->protocol = CONFIG_EMAIL['protocol'];
-        $this->smtp_host = CONFIG_EMAIL['smtp_host'];
-        $this->smtp_user = CONFIG_EMAIL['smtp_user'];
-        $this->smtp_pass = CONFIG_EMAIL['smtp_pass'];
-        $this->smtp_port = CONFIG_EMAIL['smtp_port'];
         $this->initialize($config);
         //check version php
 //        $this->_safe_mode = (!is_php('5.4') && ini_get('safe_mode'));

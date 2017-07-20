@@ -6,22 +6,26 @@
  * Date: 19/07/2017
  * Time: 09:34
  */
-class Mailing extends Email {
+class Mailing extends Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load = new Controller();
-        $this->email = new Email();
     }
 
     public function index() {
     }
 
     public function send_mail() {
-        $this->load->library('email');
+        $config = Array(
+            'protocol'  => 'smtp',
+            'smtp_host' => 'ssl://smtp.gmail.com',
+            'smtp_port' => 465,
+            'smtp_user' => 'hanhi.hust@gmail.com',
+            'smtp_pass' => '22071994',);
+        $this->library('email', $config);
         $this->email->set_newline("\r\n");
-        $this->email->from('nhiht@ows.vn', 'Name');
-        $this->email->to('hanhi.hust@gmail.com');
+        $this->email->from('hanhi.hust@gmail.com', 'Xin chào');
+        $this->email->to('nhiht@ows.vn');
         $this->email->subject(' My mail through codeigniter from localhost ');
         $this->email->message('Hello nhiha…');
         if (!$this->email->send()) {

@@ -25,31 +25,14 @@ class Controller {
         }
     }
 
-    public function library($library, $params = NULL, $object_name = NULL) {
+    public function library($library, array $config = array()) {
         if (empty($library)) {
             return $this;
-        } elseif (is_array($library)) {
-            foreach ($library as $key => $value) {
-                if (is_int($key)) {
-                    $this->library($value, $params);
-                } else {
-                    $this->library($key, $params, $value);
-                }
-            }
-
-            return $this;
+        } else {
+            include_once('libs/' . ucwords($library) . '.php');
+            $this->$library = new Email($config);
         }
 
-        if ($params !== NULL && !is_array($params)) {
-            $params = NULL;
-        }
-
-        $this->_load_library($library, $params, $object_name);
-        return $this;
-    }
-
-    protected function _load_library($class, $params = NULL, $object_name = NULL) {
-        include_once('libs/Email.php');
     }
 
     public function direct($url = NULL) {
