@@ -1,4 +1,7 @@
 <?php
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+use Monolog\Handler\FirePHPHandler;
 
 class Controller {
     const MODEL_PATH = "models/";
@@ -37,6 +40,13 @@ class Controller {
 
     public function direct($url = NULL) {
         header('location:' . URL . $url);
+    }
+
+    public function log($name) {
+        $this->log = new Logger('log');
+        $this->log->pushHandler(new StreamHandler('log/' . $name . '.log', Logger::DEBUG));
+        $this->log->pushHandler(new FirePHPHandler());
+        $this->log->info('My logger is now ready');
     }
 
 }
