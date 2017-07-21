@@ -28,11 +28,11 @@ class Login extends Controller {
         if ($login) {
             Session::init();
             Session::set('login', TRUE);
-            echo '<script>alert("Thanh cong!");</script>';
-//            $this->direct('home');
+//            echo '<script>alert("Thanh cong!");</script>';
+            $this->direct('home');
         } else {
-            echo '<script>alert("That bai!");</script>';
-//            $this->direct('Auth/login');
+//            echo '<script>alert("That bai!");</script>';
+            $this->direct('Auth/login');
         }
     }
 }
