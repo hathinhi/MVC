@@ -6,11 +6,11 @@ class View {
     private $_template = NULL;
 
     public function __construct() {
-
         if (in_array('Lang', AUTOLOAD)) {
-            $language = new Lang();
-            $this->lang = $language->load();
-        }    }
+            $this->loadLang = new Lang();
+            $this->lang = $this->loadLang->load();
+        }
+    }
 
     public function render($url) {
         if (file_exists(self::VIEW_PATH . $this->_template . ".php")) {

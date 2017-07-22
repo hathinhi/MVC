@@ -6,9 +6,11 @@ use Monolog\Handler\FirePHPHandler;
 class Controller {
     const MODEL_PATH = "models/";
     protected $_models = array();
+    protected $_lang = NULL;
 
     public function __construct() {
         $this->view = new View();
+
     }
 
     public function loadModel($name, $auth = FALSE) {
@@ -42,11 +44,19 @@ class Controller {
         header('location:' . URL . $url);
     }
 
-    public function log($name) {
-        $this->log = new Logger('log');
-        $this->log->pushHandler(new StreamHandler('log/' . $name . '.log', Logger::DEBUG));
-        $this->log->pushHandler(new FirePHPHandler());
-        $this->log->info('My logger is now ready');
+    public function log($content, $name = NULL) {
+        if (Composer) {
+            if (!isset($name) || $name == NULL) {
+                $name = (string)date('Ymd');
+            }
+
+            $this->log = new Logger(LINKLOG);
+            $this->log->pushHandler(new StreamHandler(LINKLOG . '/' . $name . '.txt', Logger::DEBUG));
+            $this->log->pushHandler(new FirePHPHandler());
+            $this->log->info($content);
+        } else {
+            echo "<div style='padding: 15px;margin-bottom: 20px;border: 1px solid transparent;border-radius: 4px; color: #8a6d3b;background-color: #fcf8e3;border-color: #faebcc;' class='alert alert-warning'>You should turn on composer in file config</div>";
+        }
     }
 
 }

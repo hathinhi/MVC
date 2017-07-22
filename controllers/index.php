@@ -12,7 +12,12 @@ class Index extends Controller {
     }
 
     function index() {
-        echo $this->view->lang->account_creation_successful;
-        $this->view->render("index/index");
+        $this->view->render('index/index');
+    }
+
+    public function configLang() {
+        $lang = $_POST['en'];
+        $this->view->loadLang->setLang($lang);
+        $this->direct('index');
     }
 }

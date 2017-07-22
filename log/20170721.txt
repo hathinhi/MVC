@@ -1,0 +1,6 @@
+[2017-07-21 06:44:23] log.INFO: My logger is now ready [] []
+[2017-07-21 06:48:48] log.INFO: My logger is now ready [] []
+[2017-07-21 06:48:49] log.INFO: My logger is now ready [] []
+[2017-07-21 06:49:40] log.INFO: nhiha [] []
+[2017-07-21 06:51:29] log.INFO: nhiha [] []
+[2017-07-21 07:00:25] log.INFO: nhiha [] []

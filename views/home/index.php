@@ -2,7 +2,7 @@
     <input type="text" name="username"/>
     <input type="submit"/>
 </form>
-
+<p><?php echo $this->lang->account_creation_successful ?></p>
 <br/>
 
 <div id="listInserts">

@@ -38,8 +38,6 @@ class Demo extends Controller {
     }
 
     function test() {
-        var_dump("Right now is %s", Carbon::now()->toDateTimeString());
-        $howOldAmI = Carbon::createFromDate(1994, 5, 21)->age;
-        var_dump($howOldAmI);
+        echo "<script> console.log(navigator.language)</script>";
     }
 }

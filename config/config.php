@@ -2,9 +2,10 @@
 define('URL', 'http://localhost/MVC/');
 define('LIBS', 'libs/');
 define('ICONV_ENABLED', FALSE);
+define('LINKLOG', 'log');
 define('MB_ENABLED', FALSE);
 define('Composer', TRUE);
-define('language', 'vietnamese');
+define('language', 'vi');
 
 $_autoload['libs'] = array(
     'Session',
