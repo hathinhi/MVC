@@ -15,10 +15,13 @@ class Lang {
     public function load($return = TRUE) {
         $language = isset($_COOKIE['language']) ? $_COOKIE : NULL;
         if ($language != NULL) {
+            //language choose lang from controller
             $path = 'libs/lang/' . $language['language'];
         } else {
+            //language choose config
             $path = 'libs/lang/' . language;
         }
+        //Get file in folder
         $files = scandir($path);
         foreach ($files as $value) {
             if (strlen($value) > 5) {

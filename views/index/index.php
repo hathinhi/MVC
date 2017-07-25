@@ -1,9 +1,9 @@
-<div>
-    <p><?php echo $this->lang->account_creation_successful ?></p>
-    <p><?php echo $this->lang->form_validation_file_required ?></p>
-    <form method="post" action="<?php echo site_url('index/configLang')?>">
-        <input type="submit" name="en" value="en">
-<!--        <input type="submit" name="vi" value="vi">-->
-    </form>
-    <a href="<?php echo site_url('home')?>">Home</a>
+<div style="margin:20px">
+    <?php if (isset($this->authUrl)){?>
+        <div align="center">
+            <h3>Login with Google -- Demo</h3>
+           <div>Please click login button to connect to Google.</div>
+           <a class="login" href="' . $authUrl . '"><img src="' . base_url('public/images/google-login-button.png') . '" /></a>
+            </div>
+    <?php } ?>
 </div>

@@ -6,7 +6,8 @@ define('LINKLOG', 'log');
 define('MB_ENABLED', FALSE);
 define('Composer', TRUE);
 define('language', 'vi');
-
+define('CLIENTID','1030811526874-8hbnaqg6rc3bjbdhjbkfmltautpe2rm4.apps.googleusercontent.com');
+define('client_secret','IP5aPF7TXWKYtmXXAE1KHHic');
 $_autoload['libs'] = array(
     'Session',
     'Auth',
