@@ -1,0 +1,13 @@
+{
+  "name": "jquery-inputlimiter",
+  "homepage": "https://github.com/mythril/jquery-inputlimiter",
+  "_release": "c1c474c823",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "c1c474c8237ce1bbabfe8863c88148c3a81db0da"
+  },
+  "_source": "https://github.com/mythril/jquery-inputlimiter.git",
+  "_target": "*",
+  "_originalSource": "jquery-inputlimiter"
+}

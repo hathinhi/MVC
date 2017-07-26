@@ -24,6 +24,9 @@ if (Composer) {
 if (file_exists('libs/core/Bootstrap.php')) {
     require_once('libs/core/Bootstrap.php');
 }
+if (file_exists('libs/Input.php')) {
+    require_once('libs/Input.php');
+}
 if (file_exists('libs/core/Controller.php')) {
     require_once('libs/core/Controller.php');
 }

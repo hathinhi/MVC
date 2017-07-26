@@ -102,7 +102,7 @@ class Bootstrap {
     private function _loadBaseController($base_url) {
         $file = $base_url . $this->_url[1] . '.php';
         if (file_exists($file)) {
-            require $file;
+            require_once $file;
             $this->_controller = new $this->_url[1];
             $length = count($this->_url);
             if ($length > 2) {

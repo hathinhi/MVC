@@ -166,7 +166,7 @@ abstract class QueryBuilder extends PDO {
         $arr_where_or = $this->strWhereOr($this->arr_where_or);
         $arr_where_not = $this->strWhereNot($this->arr_where_not);
         $arr_query_where = $this->checkArrWhere($arr_where_or, $arr_where_not, $arr_where);
-        $str_query = $str_join . $arr_query_where . $str_order_by . $str_group_by . $limit;
+        $str_query = $str_join . $arr_query_where . ' ' . $str_order_by . ' ' . $str_group_by . ' ' . $limit;
         $th = $this->prepare("SELECT $this->arr_select FROM `$this->arr_from` $str_query");
         $data_query = array_merge($this->arr_where, $this->arr_where_or, $this->arr_where_not);
         $this->bindValue($data_query, $th);
@@ -214,15 +214,30 @@ abstract class QueryBuilder extends PDO {
 
     /**
      * tra ve 1 phan tu
+     *
      * @param string $table
      * @param        $id
      *
      * @return array
      */
-    public function get_by($table = '', $id) {
-        $th = $this->prepare("SELECT * FROM `$table` WHERE id=$id LIMIT 1");
+//    public function get_by($table = '', $id) {
+//        $th = $this->prepare("SELECT * FROM `$table` WHERE id=$id LIMIT 1");
+//        $th->execute();
+//        return $th->fetchAll();
+//    }
+
+    /**
+     * tra ve 1 phan tu
+     *
+     * @param string $table
+     * @param        $id
+     *
+     * @return array
+     */
+    public function get($table = '', $id) {
+        $th = $this->prepare("SELECT * FROM `$table` WHERE id=$id");
         $th->execute();
-        return $th->fetchAll();
+        return $th->fetch();
     }
 
     /**
@@ -242,7 +257,8 @@ abstract class QueryBuilder extends PDO {
             $sth->bindValue(":$key", $value);
         }
 
-        $sth->execute();
+        $result = $sth->execute();
+        return $result;
     }
 
     /**
@@ -253,7 +269,7 @@ abstract class QueryBuilder extends PDO {
      * @param $where
      */
 
-    public function update($table, $data, $where) {
+    public function update($where, $table, $data) {
         ksort($data);
         $fieldDetails = NULL;
         foreach ($data as $key => $value) {
@@ -261,13 +277,14 @@ abstract class QueryBuilder extends PDO {
         }
         $fieldDetails = rtrim($fieldDetails, ',');
 
-        $sth = $this->prepare("UPDATE $table SET $fieldDetails WHERE $where");
+        $sth = $this->prepare("UPDATE $table SET $fieldDetails WHERE `id`=$where");
 
         foreach ($data as $key => $value) {
             $sth->bindValue(":$key", $value);
         }
 
-        $sth->execute();
+        $result = $sth->execute();
+        return $result;
     }
 
     /**
@@ -279,10 +296,16 @@ abstract class QueryBuilder extends PDO {
      *
      * @return mixed
      */
-
-    public function delete($table, $where, $limit = 1) {
-        return $this->exec("DELETE FROM $table WHERE $where LIMIT $limit");
+    public function delete($where, $table, $column) {
+        if ($column) {
+            $sth = $this->prepare("UPDATE $table SET `$column`=1 WHERE `id`=$where");
+            $result = $sth->execute();
+            return $result;
+        } else {
+            return $this->exec("DELETE FROM $table WHERE `id`= $where LIMIT 1");
+        }
     }
+
 
     /**
      * @param $data_where

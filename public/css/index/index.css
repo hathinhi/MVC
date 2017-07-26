@@ -1,0 +1,28 @@
+.container-index {
+    margin-top: 10px;
+}
+
+.header-table .bt-bg-add {
+    font-size: 30px;
+}
+
+.header-table .ac-bt-add {
+    color: #0aa5df;
+}
+
+.content-table .th-ac {
+    width: 55px;
+}
+
+.content-table .ac-bt-style {
+    text-align: center;
+    color: #0aa5df;
+    cursor: pointer;
+    font-size: 15px;
+    width: 15px;
+    margin-right: 2px;
+}
+
+.content-table a :hover {
+    font-size: 18px;
+}

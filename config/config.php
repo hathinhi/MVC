@@ -14,6 +14,7 @@ $_autoload['libs'] = array(
     'Hash',
     'Email',
     'Lang',
+    'AuthLogin',
 );
 
 $config = Array(
