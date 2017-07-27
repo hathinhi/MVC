@@ -1,5 +1,6 @@
 <?php
-class Index extends BaseController {
+
+class Member extends BaseController {
     public function __construct() {
         parent::__construct();
         $this->view->css = array('public/css/index/index.css');
@@ -14,8 +15,8 @@ class Index extends BaseController {
 
     public function setting_class() {
         $this->name = Array(
-            "class"  => "index",
-            "model" => "users",
+            "class" => "member",
+            "model" => "members",
         );
     }
 }

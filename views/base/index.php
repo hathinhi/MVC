@@ -16,19 +16,23 @@
             <th>Action</th>
             </thead>
             <tbody>
-            <?php foreach ($this->users as $user) { ?>
+            <?php if ($this->users == NULL) { ?>
+                <p>Data null</p>
+            <?php } else foreach ($this->users as $user) { ?>
                 <tr>
-                    <?php foreach ($this->headers as $name_header) {
+                    <?php
+                    foreach ($this->headers as $name_header) {
                         if ($name_header['table']) { ?>
                             <td><?php echo $user[$name_header['field']] ?></td>
                         <?php }
                     } ?>
-                    <th class="th-ac">
+                    <td class="th-ac">
                         <a href="<?php echo $this->a_link_edit . "/" . $user['id'] ?>"><i
                                     class="fa fa-pencil-square-o ac-bt-style" aria-hidden="true"></i></a>
-                        <a href="<?php echo $this->a_link_delete . "/" . $user['id'] ?>"><i
+                        <a class="e_ajax_deleted"
+                           href="<?php echo $this->a_link_delete . "/" . $user['id'] ?>"><i
                                     class="fa fa-trash ac-bt-style" aria-hidden="true"></i></a>
-                    </th>
+                    </td>
                 </tr>
             <?php } ?>
             </tbody>

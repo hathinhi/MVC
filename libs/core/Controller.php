@@ -14,7 +14,11 @@ class Controller {
 
     }
 
-    public function loadModel($name, $auth = FALSE) {
+    public function loadModel($model, $name = '', $auth = FALSE) {
+        if (empty($model)) {
+            return $this;
+        }
+        $name = $model;
         if (empty($name)) {
             return $this;
         } else {

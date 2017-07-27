@@ -1,29 +1,28 @@
 <?php
-
 /**
  * Created by IntelliJ IDEA.
  * User: nhiha
- * Date: 14/07/2017
- * Time: 10:26
+ * Date: 27/07/2017
+ * Time: 17:15
  */
-require_once "model-crud/CrudModel.php";
-class  Users_Model extends CrudModel {
-    protected $_table = 'users';
-    protected $_deleted = 'deleted';
+
+class  Members_Model extends CrudModel {
+    protected $_table = 'members';
+    protected $_deleted = FALSE;
     public $schema = [
-        'id'      => [
+        'id'       => [
             'field' => 'id',
             'label' => 'id',
-            'form'  => FALSE,
+            'form'  => TRUE,
             'table' => TRUE,
         ],
-        'username'    => [
+        'username' => [
             'field' => 'username',
             'label' => 'Tên',
             'form'  => TRUE,
             'table' => TRUE,
         ],
-        'email'   => [
+        'email'    => [
             'field' => 'email',
             'label' => 'Email',
             'form'  => TRUE,
@@ -34,5 +33,4 @@ class  Users_Model extends CrudModel {
     function __construct() {
         parent::__construct();
     }
-
 }

@@ -1,5 +1,6 @@
 <?php
 define('APPPATH', NULL);
+
 if (file_exists(APPPATH . 'config/config.php')) {
     require_once(APPPATH . 'config/config.php');
 }

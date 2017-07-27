@@ -9,6 +9,8 @@ class Bootstrap {
     private $_defaultFile = 'index.php';
 
     public function __construct() {
+        require_once "controller-base/BaseController.php";
+        require_once "model-crud/CrudModel.php";
         $this->_getUrl();
         if (empty($this->_url[0])) {
             $this->_loadControllerDefault();
