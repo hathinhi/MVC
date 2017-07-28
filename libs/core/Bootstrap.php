@@ -1,6 +1,7 @@
 <?php
 
 class Bootstrap {
+    public $url = array();
     private $_url = NULL;
     private $_controller = NULL;
     private $_controllerPath = 'controllers/';
@@ -53,9 +54,11 @@ class Bootstrap {
         $controller->index();
     }
 
+
     private function _loadExistingController() {
-        $file = $this->_controllerPath . $this->_url[0] . '.php';
-        if (strtolower($this->_url[0]) === 'auth') {
+        $url0 = $this->configUrl($this->_url[0]);
+        $file = $this->_controllerPath . $url0 . '.php';
+        if (strtolower($url0) === 'auth') {
             $base_url = 'libs/Auth/controller/';
             return $this->_loadBaseController($base_url);
         } else {
@@ -65,14 +68,15 @@ class Bootstrap {
                 $this->_error();
                 return FALSE;
             }
-            $this->_controller = new $this->_url[0];
+            $this->_controller = new $url0;
         }
     }
 
     private function _callControllerMethod() {
         $length = count($this->_url);
         if ($length > 1) {
-            if (!method_exists($this->_controller, $this->_url[1])) {
+            $url1 = $this->configUrl($this->_url[1]);
+            if (!method_exists($this->_controller, $url1)) {
                 $this->_error();
             }
         }
@@ -82,12 +86,14 @@ class Bootstrap {
         } else {
             $link_url = NULL;
             for ($i = 2; $i < $length; $i++) {
-                if (isset($this->_url[$i])) {
-                    $link_url .= $this->_url[$i] . ',';
+                $url = $this->configUrl($this->_url[$i]);
+                if (isset($url)) {
+                    $link_url .= $url . ',';
                 }
             }
             $link_url = rtrim($link_url, ',');
-            $this->_controller->{$this->_url[1]}($link_url);
+//            $url1 = $this->configUrl($this->url[1]);
+            $this->_controller->{$url1}($link_url);
         }
     }
 
@@ -102,13 +108,15 @@ class Bootstrap {
      * @return bool
      */
     private function _loadBaseController($base_url) {
-        $file = $base_url . $this->_url[1] . '.php';
+        $url1 = $this->configUrl($this->_url[1]);
+        $file = $base_url . $url1 . '.php';
         if (file_exists($file)) {
             require_once $file;
-            $this->_controller = new $this->_url[1];
+            $this->_controller = new $url1;
             $length = count($this->_url);
             if ($length > 2) {
-                if (!method_exists($this->_controller, $this->_url[2])) {
+                $url2 = $this->configUrl($this->_url[2]);
+                if (!method_exists($this->_controller, $url2)) {
                     $this->_error();
                 }
             }
@@ -118,12 +126,14 @@ class Bootstrap {
             } else {
                 $link_url = NULL;
                 for ($i = 3; $i < $length; $i++) {
-                    if (isset($this->_url[$i])) {
-                        $link_url .= $this->_url[$i] . ',';
+                    $url = $this->configUrl($this->_url[$i]);
+                    if (isset($url)) {
+                        $link_url .= $url . ',';
                     }
                 }
                 $link_url = rtrim($link_url, ',');
-                $this->_controller->{$this->_url[2]}($link_url);
+//                $url2 = $this->configUrl($this->url[2]);
+                $this->_controller->{$url2}($link_url);
             }
         } else {
             $this->_error();
@@ -161,4 +171,20 @@ class Bootstrap {
 
         return $array;
     }
+
+    //url with config
+    public function configUrl($urlbase) {
+        include("config/url.php");
+        if (!isset($url) OR !is_array($url)) {
+            return $urlbase;
+        }
+        $this->url = array_merge($this->url, $url);
+        $url = $urlbase;
+        if (in_array($urlbase, $this->url)) {
+            $key = array_search($urlbase, $this->url);
+            $url = $key;
+        }
+        return $url;
+    }
+
 }

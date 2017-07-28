@@ -15,9 +15,9 @@ class Lang {
     public function load($return = TRUE) {
         $language = isset($_COOKIE['language']) ? $_COOKIE : NULL;
         if ($language != NULL) {
-            $path = 'libs/lang/' . $language['language'];
+            $path = 'lang/' . $language['language'];
         } else {
-            $path = 'libs/lang/' . language;
+            $path = 'lang/' . language;
         }
         $files = scandir($path);
         foreach ($files as $value) {
@@ -27,7 +27,6 @@ class Lang {
                     if ($return === TRUE) {
                         return array();
                     }
-
                 }
                 $this->language = array_merge($this->language, $lang);
             }
