@@ -1,9 +1,10 @@
 <?php
+
 class Index extends BaseController {
     public function __construct() {
         parent::__construct();
-        $this->view->css = array('public/css/index/index.css');
-        $this->view->set_template('default');
+        $this->view->css("public/css/index/index.css");
+        $this->view->set_template('base');
         if (LOGIN) {
             Auth::handleLogin();
         } else {
@@ -14,8 +15,9 @@ class Index extends BaseController {
 
     public function setting_class() {
         $this->name = Array(
-            "class"  => "index",
+            "class" => "index",
             "model" => "users",
+            "object" => "Index",
         );
     }
 }
