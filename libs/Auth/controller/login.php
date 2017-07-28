@@ -11,7 +11,7 @@ class Login extends Controller {
 
     public function __construct() {
         parent::__construct();
-        $this->loadModel('user', self::MODEL_AUTH_PATH);
+        $this->loadModel('user',self::MODEL_AUTH_PATH);
         $this->view->js = array('public/js/login/login.js');
         $this->view->css = array('public/css/login/login.css');
         $this->view->set_template('login');
@@ -22,16 +22,14 @@ class Login extends Controller {
     }
 
     public function run() {
-        $username = $_POST['username'];
-        $pass = $_POST['pass'];
+        $username=$this->input->post('username');
+        $pass=$this->input->post('pass');
         $login = $this->user->login($username, $pass);
         if ($login) {
             Session::init();
             Session::set('login', TRUE);
-//            echo '<script>alert("Thanh cong!");</script>';
             $this->direct('home');
         } else {
-//            echo '<script>alert("That bai!");</script>';
             $this->direct('Auth/login');
         }
     }
