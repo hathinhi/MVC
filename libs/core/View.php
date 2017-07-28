@@ -4,6 +4,8 @@ class View {
     const TEMPLATE_ROOT = "themes/";
     const VIEW_PATH = "views/";
     private $_template = NULL;
+    public $_arrcss = array();
+    public $_arrjs = array();
 
     public function __construct() {
         if (in_array('Lang', AUTOLOAD)) {
@@ -33,6 +35,13 @@ class View {
     function set_template($template_view) {
         $template_view = str_replace(".php", "", $template_view);
         $this->_template = self::TEMPLATE_ROOT . $template_view;
+    }
+
+    public function css($css) {
+        array_push($this->_arrcss, $css);
+    }
+    public function js($js) {
+        array_push($this->_arrjs, $js);
     }
 }
 

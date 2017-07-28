@@ -1,3 +1,7 @@
+<div class="x_title">
+    <h2>Edit <?php echo $this->title ?></h2>
+    <div class="clearfix"></div>
+</div>
 <form method="post" action="<?php echo $this->edit_save ?>">
     <?php foreach ($this->forms as $form_name) {
         if ($form_name['form']) {

@@ -19,15 +19,15 @@
     <script src="<?php echo base_url("bower_components/jGrowl/jquery.jgrowl.js"); ?>"></script>
     <script src="<?php echo base_url("bower_components/select2/dist/js/select2.js"); ?>"></script>
     <?php
-    if (isset($this->css)) {
-        foreach ($this->css as $css) {
+    if (isset($this->_arrcss)) {
+        foreach ($this->_arrcss as $css) {
             echo '<link rel="stylesheet" type="text/css" href="' . base_url($css) . '">';
         }
     }
     ?>
     <?php
-    if (isset($this->js)) {
-        foreach ($this->js as $js) {
+    if (isset($this->_arrjs)) {
+        foreach ($this->_arrjs as $js) {
             $js = explode(',', $js);
             if (!isset($js[1])) {
                 echo '<script type="text/javascript" src="' . base_url($js[0]) . '"></script>';
@@ -42,8 +42,8 @@
 </div>
 
 <?php
-if (isset($this->js)) {
-    foreach ($this->js as $js) {
+if (isset($this->_arrjs)) {
+    foreach ($this->_arrjs as $js) {
         $js = explode(',', $js);
         if (isset($js[1]) && $js[1]) {
             echo '<script type="text/javascript" src="' . base_url($js[0]) . '"></script>';

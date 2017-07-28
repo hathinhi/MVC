@@ -12,8 +12,8 @@ class Login extends Controller {
     public function __construct() {
         parent::__construct();
         $this->loadModel('user',self::MODEL_AUTH_PATH);
-        $this->view->js = array('public/js/login/login.js');
-        $this->view->css = array('public/css/login/login.css');
+        $this->view->js('public/js/login/login.js');
+        $this->view->css('public/css/login/login.css');
         $this->view->set_template('login');
     }
 
@@ -28,7 +28,7 @@ class Login extends Controller {
         if ($login) {
             Session::init();
             Session::set('login', TRUE);
-            $this->direct('home');
+            $this->direct('index');
         } else {
             $this->direct('Auth/login');
         }

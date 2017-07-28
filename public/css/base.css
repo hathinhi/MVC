@@ -1,0 +1,56 @@
+.container-index {
+    margin-top: 10px;
+}
+
+.header-table .bt-bg-add {
+    font-size: 13px;
+    float: right;
+}
+
+.header-table .ac-bt-add {
+    color: #0aa5df;
+}
+
+.content-table .th-ac {
+    width: 55px;
+}
+
+.content-table .ac-bt-style {
+    text-align: center;
+    color: #0aa5df;
+    cursor: pointer;
+    font-size: 15px;
+    width: 15px;
+    height: 15px;
+    margin-right: 2px;
+}
+
+.content-table a :hover {
+    font-size: 16px;
+}
+
+.action .sorting {
+    display: none;
+}
+
+a {
+    margin-left: 10px;
+}
+
+.btn {
+    border-radius: 3px;
+    color: white;
+    border: 1px solid;
+    background-color: Gainsboro;
+}
+
+.x_title {
+    border-bottom: 2px solid black;
+    padding: 1px 0px 0px;
+}
+div.dataTables_wrapper div.dataTables_filter input {
+    margin-left: 0 !important;
+    display: inline-block;
+    width: 78% !important;
+}
+

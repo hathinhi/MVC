@@ -5,16 +5,17 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <script type="text/javascript" src="<?php echo base_url('public/js/jquery.js'); ?>"></script>
     <title><?= (isset($this->title)) ? $this->title : 'MVC'; ?></title>
+    <script src="<?php echo base_url("bower_components/jquery/dist/jquery.js"); ?>"></script>
     <?php
-    if (isset($this->css)) {
-        foreach ($this->css as $css) {
+    if (isset($this->_arrcss)) {
+        foreach ($this->_arrcss as $css) {
             echo '<link rel="stylesheet" type="text/css" href="' . base_url($css) . '">';
         }
     }
     ?>
     <?php
-    if (isset($this->js)) {
-        foreach ($this->js as $js) {
+    if (isset($this->_arrjs)) {
+        foreach ($this->_arrjs as $js) {
             $js = explode(',', $js);
             if (!isset($js[1])) {
                 echo '<script type="text/javascript" src="' . base_url($js[0]) . '"></script>';
@@ -29,8 +30,8 @@
 </div>
 
 <?php
-if (isset($this->js)) {
-    foreach ($this->js as $js) {
+if (isset($this->_arrjs)) {
+    foreach ($this->_arrjs as $js) {
         $js = explode(',', $js);
         if (isset($js[1]) && $js[1]) {
             echo '<script type="text/javascript" src="' . base_url($js[0]) . '"></script>';

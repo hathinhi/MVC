@@ -8,20 +8,23 @@
  */
 class BaseController extends Controller {
     public $name = Array(
-        "class" => "",
-        "model" => "",
+        "class"  => "",
+        "model"  => "",
+        "object" => "",
     );
 
     function __construct() {
         parent::__construct();
         $this->setting_class();
-        $this->view->js = array('public/js/base.js');
+        $this->view->css('public/css/base.css');
+        $this->view->js('public/js/base.js,TRUE');
         $this->loadModel($this->name['model']);
     }
 
     function index() {
         $model = $this->name['model'];
         $this->view->headers = $this->$model->schema;
+        $this->view->title = $this->name['object'];
         $this->view->a_link_edit = site_url($this->name['class'] . '/edit');
         $this->view->a_link_add = site_url($this->name['class'] . '/add');
         $this->view->a_link_delete = site_url($this->name['class'] . '/delete');
@@ -30,6 +33,7 @@ class BaseController extends Controller {
     }
 
     function add() {
+        $this->view->title = $this->name['object'];
         $model = $this->name['model'];
         $this->view->forms = $this->$model->schema;
         $this->view->add_save = site_url($this->name['class'] . '/add_save');
@@ -48,6 +52,7 @@ class BaseController extends Controller {
     }
 
     public function edit($id) {
+        $this->view->title = $this->name['object'];
         $model = $this->name['model'];
         $this->view->forms = $this->$model->schema;
         $this->view->userinfo = $this->$model->edit($id);

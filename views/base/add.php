@@ -1,3 +1,7 @@
+<div class="x_title">
+    <h2>Add <?php echo $this->title ?></h2>
+    <div class="clearfix"></div>
+</div>
 <form method="post" action="<?php echo $this->add_save ?>">
     <?php foreach ($this->forms as $form_name) {
         if ($form_name['form']) {
@@ -20,5 +24,5 @@
             </div>
         <?php }
     } ?>
-    <button type="submit" class="btn btn-default">Save</button>
+    <button type="submit" class="btn btn-default btn-save">Save</button>
 </form>
