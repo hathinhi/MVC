@@ -11,7 +11,7 @@ class Controller {
     public function __construct() {
         $this->view = new View();
         $this->input = new Input();
-
+        $this->upload = new Upload();
     }
 
     public function loadModel($model, $auth = FALSE) {

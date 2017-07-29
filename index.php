@@ -43,6 +43,9 @@ if (file_exists('libs/core/Model.php')) {
 if (file_exists('libs/core/View.php')) {
     require_once('libs/core/View.php');
 }
+if (file_exists('libs/Upload.php')) {
+    require_once('libs/Upload.php');
+}
 foreach (AUTOLOAD as $key => $class_name) {
     if (file_exists('libs/' . $class_name . '.php')) {
         require_once('libs/' . $class_name . '.php');
