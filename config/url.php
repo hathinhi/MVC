@@ -7,5 +7,5 @@
  */
 $url['news'] = '';
 $url['member'] = '';
-$url['index'] = '';
+$url['index'] = 'de-mo';
 $url['add'] = '';
